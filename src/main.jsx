@@ -1,10 +1,23 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import RootLayout from "./Layout/RootLayout.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
-createRoot(document.getElementById('root')).render(
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: RootLayout,
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={router}></RouterProvider>
+  </StrictMode>
+);
