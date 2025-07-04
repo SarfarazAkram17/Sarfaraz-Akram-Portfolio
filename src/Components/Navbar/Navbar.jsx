@@ -23,7 +23,6 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-80}
-              duration={500}
               activeClass="active-link"
               onClick={() => setIsOpen(false)}
               className="relative group cursor-pointer font-bold transition-all text-white active-link:text-white"

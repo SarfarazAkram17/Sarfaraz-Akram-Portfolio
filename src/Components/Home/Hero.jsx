@@ -1,17 +1,19 @@
 import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
 import { Link } from "react-scroll";
+import { FaGithub } from "react-icons/fa";
+import { LiaLinkedinIn } from "react-icons/lia";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto px-6 py-20 gap-8">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto px-6 pt-20 pb-3 gap-8">
       {/* Left: Text */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
         <h2 className="text-xl font-bold">Hi 👋, I'm</h2>
         <h1 className="text-4xl md:text-5xl font-bold text-white">
           Sarfaraz Akram
         </h1>
-        <h3 className="text-2xl font-semibold flex items-center gap-1">
+        <h3 className="text-2xl font-semibold flex justify-center md:justify-start items-center gap-1">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
             <Typewriter
               words={[
@@ -36,12 +38,39 @@ const Hero = () => {
           to stay ahead in this fast-evolving field.
         </p>
 
-        <Link
-          to="contact"
-          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
-        >
-          Let’s Connect
-        </Link>
+        <div className="flex items-center gap-10">
+          <Link
+            to="contact"
+            smooth={true}
+            className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
+          >
+            Let’s Connect
+          </Link>
+          <div className="flex gap-4 items-center">
+            <a
+              data-aos="fade-down"
+              href="https://github.com/SarfarazAkram17"
+              target="_blank"
+            >
+              {" "}
+              <FaGithub
+                size={35}
+                className="text-black bg-white rounded-full"
+              />
+            </a>
+            <a
+              data-aos="fade-left"
+              href="https://www.linkedin.com/in/sarfaraz-akram"
+              target="_blank"
+            >
+              {" "}
+              <LiaLinkedinIn
+                size={32}
+                className="bg-[#0077B5] text-white rounded-sm"
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Right: Image */}
@@ -51,11 +80,7 @@ const Hero = () => {
             <img
               src="https://i.ibb.co/d45mZWMX/Portfolio-image-modified.png"
               alt="Sarfaraz Akram"
-              className="w-72 h-72 md:w-80 md:h-80 rounded-full object-cover"
-              style={{
-                boxShadow:
-                  "0 0 30px rgba(139, 92, 246, 0.7), 0 0 60px rgba(236, 72, 153, 0.5), 0 0 90px rgba(239, 68, 68, 0.5)",
-              }}
+              className="w-72 h-72 md:w-[21rem] md:h-[21rem] rounded-full object-cover"
             />
           </div>
         </Tilt>
