@@ -6,7 +6,7 @@ import { LiaLinkedinIn } from "react-icons/lia";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto px-6 pt-20 pb-3 gap-8">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto px-4 pt-20 gap-8">
       {/* Left: Text */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
         <h2 className="text-xl font-bold">Hi 👋, I'm</h2>
@@ -60,7 +60,7 @@ const Hero = () => {
             </a>
             <a
               data-aos="fade-left"
-              href="https://www.linkedin.com/in/sarfaraz-akram"
+              href="https://www.linkedin.com/in/sarfarazakram"
               target="_blank"
             >
               {" "}

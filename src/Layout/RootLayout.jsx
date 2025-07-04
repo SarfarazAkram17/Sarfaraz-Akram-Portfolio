@@ -5,10 +5,11 @@ import CenterGlowBackground from "../Components/CenterGlowBackground/CenterGlowB
 import Navbar from "../Components/Navbar/Navbar";
 import About from "../Components/About/About";
 import Showcase from "../Components/Showcase/Showcase";
-import { FaGithub } from "react-icons/fa";
-import { LiaLinkedinIn } from "react-icons/lia";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
+import TechUsage from "../Components/TechUsage/TechUsage";
+import Contact from "../Components/Contact/Contact";
+import { ToastContainer } from "react-toastify";
 
 const RootLayout = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -27,6 +28,7 @@ const RootLayout = () => {
   }, []);
   return (
     <div>
+      <ToastContainer theme="dark"></ToastContainer>
       <div className="sticky top-0 z-50">
         <ProgressBar
           percent={scrollPercent}
@@ -41,20 +43,8 @@ const RootLayout = () => {
         <Home></Home>
         <About></About>
         <Showcase></Showcase>
-
-        <div className="flex flex-col justify-center gap-4 sticky bottom-4 left-0">
-          <a href="https://github.com/SarfarazAkram17" target="_blank">
-            {" "}
-            <FaGithub size={35} className="text-black bg-white rounded-full" />
-          </a>
-          <a href="https://www.linkedin.com/in/sarfaraz-akram" target="_blank">
-            {" "}
-            <LiaLinkedinIn
-              size={32}
-              className="bg-[#0077B5] text-white rounded-sm"
-            />
-          </a>
-        </div>
+        <TechUsage></TechUsage>
+        <Contact></Contact>
       </div>
     </div>
   );

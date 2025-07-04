@@ -6,38 +6,9 @@ import { PiCertificate } from "react-icons/pi";
 import { LiaMedalSolid } from "react-icons/lia";
 import { FaGoogleScholar } from "react-icons/fa6";
 
-const stats = [
-  {
-    icon: <IoCodeSlash size={50} className="p-3 rounded-full bg-black/20" />,
-    title: "Projects",
-    description: "Innovative web applications",
-    count: 3,
-  },
-  {
-    icon: (
-      <FaGoogleScholar size={50} className="p-3 rounded-full bg-black/20" />
-    ),
-    title: "Years of Experience",
-    description: "Journey of continuous learning.",
-    count: 1,
-  },
-  {
-    icon: <PiCertificate size={50} className="p-3 rounded-full bg-black/20" />,
-    title: "Certificates",
-    description: "Proof of acquired skills.",
-    count: 0,
-  },
-  {
-    icon: <LiaMedalSolid size={50} className="p-3 rounded-full bg-black/20" />,
-    title: "Awards",
-    description: "Earned for impactful contributions.",
-    count: 0,
-  },
-];
-
 const About = () => {
   return (
-    <div className="pt-20 mt-14 max-w-5xl mx-auto px-6" id="about">
+    <div className="pt-10 mt-[4.5rem] max-w-5xl mx-auto px-4" id="about">
       <div data-aos="fade-up">
         <h1 className="text-4xl text-center md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
           About Me
@@ -63,7 +34,6 @@ const About = () => {
       >
         <a
           className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
-          href="/SarfarazAkram_CV.pdf"
           download
         >
           Download CV
@@ -78,26 +48,116 @@ const About = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-        {stats.map((item, idx) => (
-          <Link
-            to="portfolio"
-            smooth={true}
-            key={idx}
-            className="cursor-pointer"
-          >
-            <div className="bg-white/5 flex justify-between items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
-              <div className="space-y-4">
-                {item.icon}
-                <h5 className="text-sm font-bold">{item.title}</h5>
-                <p className="text-xs whitespace-nowrap">{item.description}</p>
-              </div>
-              <div className="space-y-16">
-                <h2 className="text-3xl font-bold">{item.count}</h2>
-                <BsArrowDownRight />
-              </div>
+        <Link
+          data-aos="fade-up-right"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <IoCodeSlash
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-up-right" className="text-sm font-bold mb-1">
+                Projects
+              </h5>
+              <p data-aos="fade-up-right" className="text-xs">
+                Innovative web applications
+              </p>
             </div>
-          </Link>
-        ))}
+            <div className="space-y-16">
+              <h2 data-aos="fade-up-right" className="text-3xl font-bold">
+                3
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          data-aos="fade-down-right"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <FaGoogleScholar
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-down-right" className="text-sm font-bold mb-1">
+                Years of Experience
+              </h5>
+              <p data-aos="fade-down-right" className="text-xs">
+                Journey of continuous learning.
+              </p>
+            </div>
+            <div className="space-y-16">
+              <h2 data-aos="fade-down-right" className="text-3xl font-bold">
+                1
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          data-aos="fade-down-left"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <PiCertificate
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-down-left" className="text-sm font-bold mb-1">
+                Certificates
+              </h5>
+              <p data-aos="fade-down-left" className="text-xs">
+                Proof of acquired skills.
+              </p>
+            </div>
+            <div className="space-y-16">
+              <h2 data-aos="fade-down-left" className="text-3xl font-bold">
+                0
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
+        <Link
+          data-aos="fade-up-left"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <LiaMedalSolid
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-up-left" className="text-sm font-bold mb-1">
+                Awards
+              </h5>
+              <p data-aos="fade-up-left" className="text-xs">
+                Earned for impactful contributions.
+              </p>
+            </div>
+            <div className="space-y-16">
+              <h2 data-aos="fade-up-left" className="text-3xl font-bold">
+                0
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
