@@ -9,7 +9,7 @@ import Tilt from "react-parallax-tilt";
 
 const About = () => {
   return (
-    <div className="border pb-6 pt-10 mt-[4.5rem] max-w-5xl mx-auto px-4" id="about">
+    <div className="pb-6 pt-10 mt-[4.5rem] max-w-5xl mx-auto px-4" id="about">
       <div data-aos="fade-up">
         <h1 className="text-4xl text-center md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
           About Me

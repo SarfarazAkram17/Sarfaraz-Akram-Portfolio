@@ -42,7 +42,7 @@ const Contact = () => {
       });
   };
   return (
-    <div id="contact" className="border max-w-5xl mx-auto mt-10 pt-10 px-4 mb-6">
+    <div id="contact" className="max-w-5xl mx-auto mt-10 pt-10 px-4 mb-6">
       <div data-aos="fade-up">
         <h1 className="text-4xl text-center md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
           Contact Me
