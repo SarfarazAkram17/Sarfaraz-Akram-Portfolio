@@ -49,131 +49,117 @@ const About = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-        <Tilt>
-          <Link
-            data-aos="fade-up-right"
-            to="portfolio"
-            smooth={true}
-            className="cursor-pointer"
-          >
-            <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
-              <div>
-                <IoCodeSlash
-                  size={50}
-                  className="p-3 rounded-full bg-black/20 mb-4"
-                />
-                <h5 data-aos="fade-up-right" className="text-sm font-bold mb-1">
-                  Projects
-                </h5>
-                <p data-aos="fade-up-right" className="text-xs">
-                  Innovative web applications
-                </p>
-              </div>
-              <div className="space-y-16">
-                <h2 data-aos="fade-up-right" className="text-3xl font-bold">
-                  3
-                </h2>
-                <BsArrowDownRight />
-              </div>
+        <Link
+          data-aos="fade-up-right"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <IoCodeSlash
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-up-right" className="text-sm font-bold mb-1">
+                Projects
+              </h5>
+              <p data-aos="fade-up-right" className="text-xs">
+                Innovative web applications
+              </p>
             </div>
-          </Link>
-        </Tilt>
+            <div className="space-y-16">
+              <h2 data-aos="fade-up-right" className="text-3xl font-bold">
+                2
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
 
-        <Tilt>
-          <Link
-            data-aos="fade-down-right"
-            to="portfolio"
-            smooth={true}
-            className="cursor-pointer"
-          >
-            <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
-              <div>
-                <FaGoogleScholar
-                  size={50}
-                  className="p-3 rounded-full bg-black/20 mb-4"
-                />
-                <h5
-                  data-aos="fade-down-right"
-                  className="text-sm font-bold mb-1"
-                >
-                  Years of Experience
-                </h5>
-                <p data-aos="fade-down-right" className="text-xs">
-                  Journey of continuous learning.
-                </p>
-              </div>
-              <div className="space-y-16">
-                <h2 data-aos="fade-down-right" className="text-3xl font-bold">
-                  1
-                </h2>
-                <BsArrowDownRight />
-              </div>
+        <Link
+          data-aos="fade-down-right"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <FaGoogleScholar
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-down-right" className="text-sm font-bold mb-1">
+                Years of Experience
+              </h5>
+              <p data-aos="fade-down-right" className="text-xs">
+                Journey of continuous learning.
+              </p>
             </div>
-          </Link>
-        </Tilt>
+            <div className="space-y-16">
+              <h2 data-aos="fade-down-right" className="text-3xl font-bold">
+                1
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
 
-        <Tilt>
-          <Link
-            data-aos="fade-down-left"
-            to="portfolio"
-            smooth={true}
-            className="cursor-pointer"
-          >
-            <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
-              <div>
-                <PiCertificate
-                  size={50}
-                  className="p-3 rounded-full bg-black/20 mb-4"
-                />
-                <h5
-                  data-aos="fade-down-left"
-                  className="text-sm font-bold mb-1"
-                >
-                  Certificates
-                </h5>
-                <p data-aos="fade-down-left" className="text-xs">
-                  Proof of acquired skills.
-                </p>
-              </div>
-              <div className="space-y-16">
-                <h2 data-aos="fade-down-left" className="text-3xl font-bold">
-                  0
-                </h2>
-                <BsArrowDownRight />
-              </div>
+        <Link
+          data-aos="fade-down-left"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <PiCertificate
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-down-left" className="text-sm font-bold mb-1">
+                Certificates
+              </h5>
+              <p data-aos="fade-down-left" className="text-xs">
+                Proof of acquired skills.
+              </p>
             </div>
-          </Link>
-        </Tilt>
+            <div className="space-y-16">
+              <h2 data-aos="fade-down-left" className="text-3xl font-bold">
+                0
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
 
-        <Tilt>
-          <Link
-            data-aos="fade-up-left"
-            to="portfolio"
-            smooth={true}
-            className="cursor-pointer"
-          >
-            <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
-              <div>
-                <LiaMedalSolid
-                  size={50}
-                  className="p-3 rounded-full bg-black/20 mb-4"
-                />
-                <h5 data-aos="fade-up-left" className="text-sm font-bold mb-1">
-                  Awards
-                </h5>
-                <p data-aos="fade-up-left" className="text-xs">
-                  Earned for impactful contributions.
-                </p>
-              </div>
-              <div className="space-y-16">
-                <h2 data-aos="fade-up-left" className="text-3xl font-bold">
-                  0
-                </h2>
-                <BsArrowDownRight />
-              </div>
+        <Link
+          data-aos="fade-up-left"
+          to="portfolio"
+          smooth={true}
+          className="cursor-pointer"
+        >
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+            <div>
+              <LiaMedalSolid
+                size={50}
+                className="p-3 rounded-full bg-black/20 mb-4"
+              />
+              <h5 data-aos="fade-up-left" className="text-sm font-bold mb-1">
+                Awards
+              </h5>
+              <p data-aos="fade-up-left" className="text-xs">
+                Earned for impactful contributions.
+              </p>
             </div>
-          </Link>
-        </Tilt>
+            <div className="space-y-16">
+              <h2 data-aos="fade-up-left" className="text-3xl font-bold">
+                0
+              </h2>
+              <BsArrowDownRight />
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );

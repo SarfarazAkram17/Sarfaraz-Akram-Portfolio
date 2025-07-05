@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <div id="contact" className="max-w-5xl mx-auto mt-10 pt-10 px-4 mb-6">
       <div data-aos="fade-up">
-        <h1 className="text-4xl text-center md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
+        <h1 className="text-3xl text-center sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
           Contact Me
         </h1>
         <div className="mt-3 mb-14 w-40 h-1 rounded-full mx-auto bg-gradient-to-l from-purple-500 via-pink-500 to-red-500" />
@@ -234,7 +234,7 @@ const Contact = () => {
                 disabled={messaging}
                 type="submit"
                 data-aos="fade-up"
-                className="btn w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
+                className="btn w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-102 transition-all duration-500"
               >
                 {messaging ? (
                   <span className="loading loading-spinner loading-md text-green-400"></span>

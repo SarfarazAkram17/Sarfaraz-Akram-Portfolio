@@ -29,3 +29,9 @@
 .RSPBprogressBar .RSPBprogression {
   border-radius: 0 !important;
 }
+
+@media screen and (min-width: 320px) {
+  body{
+    overflow-x: hidden;
+  }
+}

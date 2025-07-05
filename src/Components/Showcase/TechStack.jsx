@@ -11,6 +11,7 @@ import node from "../../assets/nodejs.svg";
 import express from "../../assets/express.png";
 import mongodb from "../../assets/mongodb.png";
 import github from "../../assets/github.png";
+import Tilt from "react-parallax-tilt";
 
 const techs = [
   { name: "HTML", src: html, aos: "fade-up-right" },
@@ -34,13 +35,14 @@ const techs = [
 
 const TechStack = () => {
   return (
-    <div className="p-6 mt-6">
+    <div className="p-3 md:p-6 mt-6">
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {techs.map((tech, i) => (
-          <div
+        <Tilt>
+              <div
             key={i}
             data-aos={tech.aos}
-            className="group bg-black/40 hover:scale-105 hover:bg-black/20 transition-all duration-500 p-4 rounded-lg flex gap-2 flex-col justify-center items-center"
+            className="group h-36 bg-black/40 hover:scale-105 hover:bg-black/20 transition-all duration-500 p-4 rounded-lg flex gap-2 flex-col justify-center items-center"
           >
             {/* Image glow container */}
             <div className="relative">
@@ -53,6 +55,7 @@ const TechStack = () => {
             </div>
             <h5 className="text-white/70 font-bold">{tech.name}</h5>
           </div>
+        </Tilt>
         ))}
       </div>
     </div>

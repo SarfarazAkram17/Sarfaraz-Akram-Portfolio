@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import Home from "../Components/Home/Home";
 import Cursor from "../Components/Cursor/Cursor";
 import CenterGlowBackground from "../Components/CenterGlowBackground/CenterGlowBackground";
 import Navbar from "../Components/Navbar/Navbar";
-import About from "../Components/About/About";
-import Showcase from "../Components/Showcase/Showcase";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
-import Contact from "../Components/Contact/Contact";
 import { ToastContainer } from "react-toastify";
+import { Outlet } from "react-router";
 
 const RootLayout = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -28,6 +25,7 @@ const RootLayout = () => {
   return (
     <div>
       <ToastContainer theme="dark"></ToastContainer>
+      <CenterGlowBackground></CenterGlowBackground>
       <div className="sticky top-0 z-50">
         <ProgressBar
           percent={scrollPercent}
@@ -35,15 +33,9 @@ const RootLayout = () => {
           height={6}
         />
       </div>
-      <div className="xl:container mx-auto px-4">
-        <CenterGlowBackground></CenterGlowBackground>
-        <Cursor></Cursor>
-        <Navbar></Navbar>
-        <Home></Home>
-        <About></About>
-        <Showcase></Showcase>
-        <Contact></Contact>
-      </div>
+      <Cursor></Cursor>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </div>
   );
 };
