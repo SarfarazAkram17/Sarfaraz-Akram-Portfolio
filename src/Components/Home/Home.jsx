@@ -4,7 +4,7 @@ import Hero from './Hero';
 
 const Home = () => {
     return (
-        <div id='home'>
+        <div id='home' className='border mt-4 max-w-5xl mx-auto'>
             <Hero></Hero>
         </div>
     );

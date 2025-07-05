@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "../Components/Home/Home";
 import Cursor from "../Components/Cursor/Cursor";
 import CenterGlowBackground from "../Components/CenterGlowBackground/CenterGlowBackground";
@@ -7,7 +7,6 @@ import About from "../Components/About/About";
 import Showcase from "../Components/Showcase/Showcase";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
-import TechUsage from "../Components/TechUsage/TechUsage";
 import Contact from "../Components/Contact/Contact";
 import { ToastContainer } from "react-toastify";
 
@@ -43,7 +42,6 @@ const RootLayout = () => {
         <Home></Home>
         <About></About>
         <Showcase></Showcase>
-        <TechUsage></TechUsage>
         <Contact></Contact>
       </div>
     </div>

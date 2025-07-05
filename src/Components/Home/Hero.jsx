@@ -6,7 +6,7 @@ import { LiaLinkedinIn } from "react-icons/lia";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto px-4 pt-20 gap-8">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-4 pt-20 gap-8">
       {/* Left: Text */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
         <h2 className="text-xl font-bold">Hi 👋, I'm</h2>
@@ -76,7 +76,7 @@ const Hero = () => {
       {/* Right: Image */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Tilt>
-          <div className="relative">
+          <div className="relative p-2 border-2 border-lime-300 rounded-full">
             <img
               src="https://i.ibb.co/d45mZWMX/Portfolio-image-modified.png"
               alt="Sarfaraz Akram"
