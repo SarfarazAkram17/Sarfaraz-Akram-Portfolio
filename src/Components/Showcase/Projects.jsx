@@ -1,6 +1,8 @@
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import projectsData from "../../projectsData";
 import { Link } from "react-router";
+import { BsArrowRight } from "react-icons/bs";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Projects = () => {
   const projects = projectsData;
@@ -11,15 +13,17 @@ const Projects = () => {
         <div
           key={project.id}
           data-aos={project.aos}
-          className="bg-[#1e2b3a] rounded-2xl overflow-hidden shadow-md text-white flex flex-col"
+          className="bg-[#1e2b3a] transf rounded-2xl shadow-md text-white flex flex-col group border border-transparent hover:border-purple-600 hover:shadow-2xl transition-all duration-500"
         >
           {/* Image */}
           <div className="p-4 pb-0 flex justify-center">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 rounded-lg"
-            />
+            <div className="relative w-full h-48 rounded-lg overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
           </div>
 
           {/* Content */}
@@ -29,24 +33,13 @@ const Projects = () => {
 
             {/* Description */}
             <p className="text-sm text-white/80 mb-3">
-              {project.desc}
-              <span className="text-sky-400 font-medium cursor-pointer">
-                {" "}
-                read more
-              </span>
-            </p>
-
-            {/* Stack Badges */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.techs.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="bg-white text-black text-xs font-semibold px-2 py-1 rounded-full"
-                >
-                  {tech}
+              {project.desc}{" "}
+              <Link to={`/project/${project.id}`}>
+                <span className="text-sky-400 hover:underline font-medium cursor-pointer">
+                  read more
                 </span>
-              ))}
-            </div>
+              </Link>
+            </p>
 
             {/* Buttons */}
             <div className="flex items-center justify-between">
@@ -61,15 +54,15 @@ const Projects = () => {
                 <a
                   href={project.github}
                   target="_blank"
-                  className="btn btn-sm rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
+                  className="btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
                 >
-                  Github
+                  Github <GoArrowUpRight size={15} />
                 </a>
                 <Link
                   to={`/project/${project.id}`}
-                  className="btn btn-sm rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
+                  className="btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
                 >
-                  Details
+                  Details <BsArrowRight size={15} />
                 </Link>
               </div>
             </div>

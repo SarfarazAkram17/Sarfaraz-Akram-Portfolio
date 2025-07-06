@@ -16,7 +16,7 @@ const Navbar = () => {
     <header className="sticky top-3 z-50 max-w-3xl mx-auto rounded-xl backdrop-blur-xl bg-white/5 border border-white/10">
       <div className="px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-purple-500 via-pink-500 to-red-500">
+        <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600">
           SARFARAZ AKRAM
         </h1>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
               className="relative group cursor-pointer transition-all"
             >
               {label}
-              <span className="absolute bottom-[-4px] left-0 h-[2.5px] w-0 group-hover:w-full group-[.active-link]:w-full transition-all duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full"></span>
+              <span className="absolute bottom-[-4px] left-0 h-[2.5px] w-0 group-hover:w-full group-[.active-link]:w-full transition-all duration-500 bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full"></span>
             </Link>
           ))}
         </nav>
@@ -67,7 +67,7 @@ const Navbar = () => {
                 className="relative group cursor-pointer transition-all"
               >
                 {label}
-                <span className="absolute bottom-[-4px] left-0 h-[2.5px] w-0 group-hover:w-full group-[.active-link]:w-full transition-all duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full"></span>
+                <span className="absolute bottom-[-4px] left-0 h-[2.5px] w-0 group-hover:w-full group-[.active-link]:w-full transition-all duration-500 bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full"></span>
               </Link>
             ))}
           </nav>

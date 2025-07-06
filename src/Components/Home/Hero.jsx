@@ -14,7 +14,7 @@ const Hero = () => {
           Sarfaraz Akram
         </h1>
         <h3 className="text-2xl font-semibold flex justify-center md:justify-start items-center gap-1">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600">
             <Typewriter
               words={[
                 "Full Stack Developer",
@@ -24,7 +24,7 @@ const Hero = () => {
               loop={0}
             />
           </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500 animate-pulse">
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 via-cyan-600 to-green-600 animate-pulse">
             |
           </span>
         </h3>
@@ -42,7 +42,7 @@ const Hero = () => {
           <Link
             to="contact"
             smooth={true}
-            className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
+            className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
           >
             Let’s Connect
           </Link>

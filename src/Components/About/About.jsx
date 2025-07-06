@@ -11,10 +11,10 @@ const About = () => {
   return (
     <div className="pb-6 pt-10 mt-[4.5rem] max-w-5xl mx-auto px-4" id="about">
       <div data-aos="fade-up">
-        <h1 className="text-4xl text-center md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
+        <h1 className="text-4xl text-center md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 via-cyan-600 to-green-600">
           About Me
         </h1>
-        <div className="mt-3 mb-6 w-32 h-1 rounded-full mx-auto bg-gradient-to-l from-purple-500 via-pink-500 to-red-500" />
+        <div className="mt-3 mb-6 w-32 h-1 rounded-full mx-auto bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
       </div>
 
       <p
@@ -34,7 +34,7 @@ const About = () => {
         className="flex justify-center flex-col gap-6 mt-6 sm:flex-row items-center"
       >
         <a
-          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300"
+          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
           download
         >
           Download CV
@@ -42,20 +42,20 @@ const About = () => {
         <Link
           to="portfolio"
           smooth={true}
-          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-purple-500 via-pink-500 to-red-500 hover:scale-105 active:scale-95 transition duration-300 cursor-pointer"
+          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300 cursor-pointer"
         >
           View Projects
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-14 items-center">
         <Link
           data-aos="fade-up-right"
           to="portfolio"
           smooth={true}
           className="cursor-pointer"
         >
-          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-start hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
             <div>
               <IoCodeSlash
                 size={50}
@@ -83,7 +83,7 @@ const About = () => {
           smooth={true}
           className="cursor-pointer"
         >
-          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-start hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
             <div>
               <FaGoogleScholar
                 size={50}
@@ -111,7 +111,7 @@ const About = () => {
           smooth={true}
           className="cursor-pointer"
         >
-          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-start hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
             <div>
               <PiCertificate
                 size={50}
@@ -139,7 +139,7 @@ const About = () => {
           smooth={true}
           className="cursor-pointer"
         >
-          <div className="bg-white/5 h-full flex justify-between gap-4 items-center hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
+          <div className="bg-white/5 h-full flex justify-between gap-4 items-start hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
             <div>
               <LiaMedalSolid
                 size={50}

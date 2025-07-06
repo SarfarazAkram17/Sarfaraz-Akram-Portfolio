@@ -6,7 +6,8 @@ const projectData = [
   {
     id: "profast",
     title: "ProFast – Parcel Delivery System (FullStack)",
-    desc: "ProFast is a logistics and parcel delivery management system for creating, assigning, and tracking deliveries with role-based access for admins, riders, and users.",
+    desc: "ProFast is a logistics and parcel delivery management system for creating, assigning, and tracking deliveries with role-based...",
+    extra: 'access for admins, riders, and users.',
     techs: [
       "Tailwind CSS",
       "React.js",
@@ -25,7 +26,8 @@ const projectData = [
   {
     id: "studify",
     title: "Studify – Group Study Platform (FullStack)",
-    desc: "Studify is a group study platform where students can create, update, and delete their own assignments. Others can complete and submit assignments, and receive peer-reviewed marks.",
+    desc: "Studify is a group study platform where students can create, update, and delete their own assignments. Others can...",
+    extra: 'complete and submit assignments, and receive peer-reviewed marks.',
     techs: [
       "React.js",
       "Firebase",
@@ -41,7 +43,8 @@ const projectData = [
   {
     id: "taskwave",
     title: "TaskWave – Freelancing Website for Small Tasks (FullStack)",
-    desc: "TaskWave is a full-stack freelancing platform built with the MERN stack and Firebase Authentication. Users can create, update, and delete their own tasks. Freelancers can bid on tasks and get them assigned.",
+    desc: "TaskWave is a full-stack freelancing platform built with the MERN stack and Firebase Authentication. Users can...",
+    extra:'create, update, and delete their own tasks. Freelancers can bid on tasks and get them assigned.',
     techs: [
       "Tailwind CSS",
       "React.js",

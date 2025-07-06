@@ -3,7 +3,7 @@
 
 .active-link {
   color: transparent;
-  background: linear-gradient(to right, #8b5cf6, #ec4899, #ef4444);
+  background: linear-gradient(to right, #60A5FA, #0891B2, #16A34A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -30,7 +30,7 @@
   border-radius: 0 !important;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   body{
     overflow-x: hidden;
   }
