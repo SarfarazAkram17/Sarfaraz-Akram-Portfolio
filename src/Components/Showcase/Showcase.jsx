@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoCodeSlash } from "react-icons/io5";
+import { LuCodeXml } from "react-icons/lu";
 import { PiCertificate } from "react-icons/pi";
 import { LiaMedalSolid } from "react-icons/lia";
 import { FaMicrochip } from "react-icons/fa6";
@@ -12,7 +12,7 @@ const Showcase = () => {
   const [activeTab, setActiveTab] = useState("projects");
 
   const tabs = [
-    { key: "projects", label: "Projects", icon: <IoCodeSlash size={30} /> },
+    { key: "projects", label: "Projects", icon: <LuCodeXml size={30} /> },
     {
       key: "certificates",
       label: "Certificates",
@@ -32,7 +32,7 @@ const Showcase = () => {
         <h1 className="text-3xl text-center sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 via-cyan-600 to-green-600">
           Portfolio Showcase
         </h1>
-        <div className="mt-3 mb-10 w-60 md:w-80 h-1 rounded-full mx-auto bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
+        <div className="mt-3 mb-10 w-52 md:w-80 h-1 rounded-full mx-auto bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
 
         <div className="rounded-xl grid grid-cols-2 sm:grid-cols-4 py-4 px-6 gap-4 items-center bg-white/5">
           {tabs.map((tab) => (

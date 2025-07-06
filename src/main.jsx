@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         Component: HomeLayout,
       },
       {
-        path: "/project/:projectId",
+        path: "/project/:projectName",
         Component: ProjectDetails,
       },
     ],

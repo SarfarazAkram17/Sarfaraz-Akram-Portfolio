@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { IoCodeSlash } from "react-icons/io5";
+import { LuCodeXml } from "react-icons/lu";
 import { BsArrowDownRight } from "react-icons/bs";
 import { PiCertificate } from "react-icons/pi";
 import { LiaMedalSolid } from "react-icons/lia";
@@ -57,7 +57,7 @@ const About = () => {
         >
           <div className="bg-white/5 h-full flex justify-between gap-4 items-start hover:bg-white/15 rounded-lg transition-all duration-300 p-4">
             <div>
-              <IoCodeSlash
+              <LuCodeXml
                 size={50}
                 className="p-3 rounded-full bg-black/20 mb-4"
               />

@@ -62,6 +62,7 @@ const Contact = () => {
             data-aos="fade-right"
             className="p-5 bg-white/10 rounded-xl space-y-4 h-full"
           >
+            {/* Email */}
             <div
               data-aos="fade-up"
               className="p-4 hover:bg-white/25 transition duration-700 bg-white/15 flex gap-4 rounded-xl items-center"
@@ -77,6 +78,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Phone */}
             <div
               data-aos="fade-up"
               className="p-4 hover:bg-white/25 transition duration-700 bg-white/15 flex gap-4 rounded-xl items-center"
@@ -88,10 +90,11 @@ const Contact = () => {
               />
               <div>
                 <h5 className="font-bold">Phone</h5>
-                <p className="text-xs sm:text-sm ">+88 01973254091</p>
+                <p className="text-xs sm:text-sm">+88 01973254091</p>
               </div>
             </div>
 
+            {/* WhatsApp */}
             <div
               data-aos="fade-up"
               className="p-4 hover:bg-white/25 transition duration-700 bg-white/15 flex gap-4 rounded-xl items-center"
@@ -103,10 +106,11 @@ const Contact = () => {
               />
               <div>
                 <h5 className="font-bold">Whatsapp</h5>
-                <p className="text-xs sm:text-sm ">+88 01973254091</p>
+                <p className="text-xs sm:text-sm">+88 01973254091</p>
               </div>
             </div>
 
+            {/* Location */}
             <div
               data-aos="fade-up"
               className="p-4 hover:bg-white/25 transition duration-700 bg-white/15 flex gap-4 rounded-xl items-center"
@@ -120,7 +124,7 @@ const Contact = () => {
               </div>
               <div>
                 <h5 className="font-bold">Location</h5>
-                <p className="text-xs sm:text-sm ">
+                <p className="text-xs sm:text-sm">
                   Saidpur, Nilphamari, Rangpur, Bangladesh
                 </p>
               </div>
@@ -142,7 +146,7 @@ const Contact = () => {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600">
                   Get in Touch
                 </h1>
-                <FiShare2 className="text-3xl md:text-4xl text-[#DB38AF]" />
+                <FiShare2 className="text-3xl md:text-4xl text-[#009E85]" />
               </div>
               <p className="text-xs mb-8 text-white/70">
                 Message me if you want to collaborate with me in any web
@@ -155,9 +159,15 @@ const Contact = () => {
               className="space-y-4 w-full mx-auto flex flex-col justify-between"
             >
               <div>
+                {/* Name Field */}
                 <label
                   data-aos="fade-up"
-                  className="input rounded-lg w-full bg-white/15 focus-within:border-lime-500 focus-within:outline-none focus-within:ring-0"
+                  className="input rounded-lg w-full bg-white/15 
+                  focus-within:border-[#009D8F] 
+                  border-2 
+                  border-transparent
+                  focus-within:outline-none 
+                  focus-within:ring-0"
                 >
                   <svg
                     className="h-[1.5em] opacity-50"
@@ -180,13 +190,19 @@ const Contact = () => {
                     name="user_name"
                     required
                     placeholder="Your Name"
-                    className="bg-transparent focus:outline-none focus:ring-0 focus:border-lime-500 w-full"
+                    className="bg-transparent focus:outline-none focus:ring-0 focus:border-[#009D8F] w-full"
                   />
                 </label>
 
+                {/* Email Field */}
                 <label
                   data-aos="fade-up"
-                  className="input rounded-lg w-full bg-white/15 mt-5 focus-within:border-lime-500 focus-within:outline-none focus-within:ring-0"
+                  className="input rounded-lg w-full bg-white/15 mt-5 
+                  focus-within:border-[#009D8F] 
+                  border-2 
+                  border-transparent
+                  focus-within:outline-none 
+                  focus-within:ring-0"
                 >
                   <svg
                     className="h-[1.5em] opacity-50"
@@ -209,17 +225,23 @@ const Contact = () => {
                     name="user_email"
                     required
                     placeholder="Your Email"
-                    className="bg-transparent focus:outline-none focus:ring-0 focus:border-lime-500 w-full"
+                    className="bg-transparent focus:outline-none focus:ring-0 focus:border-[#009D8F] w-full"
                   />
                 </label>
 
+                {/* Message Field */}
                 <textarea
                   data-aos="fade-up"
                   name="message"
                   rows={4}
                   required
                   placeholder="Describe your message"
-                  className="textarea rounded-lg w-full bg-white/15 mt-[18px] resize-none focus:outline-none focus:ring-0 focus:border-lime-500"
+                  className="textarea rounded-lg w-full bg-white/15 mt-[18px] resize-none 
+                  focus:outline-none 
+                  focus:ring-0 
+                  focus:border-[#009D8F] 
+                  border-2 
+                  border-transparent"
                 />
                 <input
                   type="text"
@@ -230,6 +252,7 @@ const Contact = () => {
                 />
               </div>
 
+              {/* Submit Button */}
               <button
                 disabled={messaging}
                 type="submit"

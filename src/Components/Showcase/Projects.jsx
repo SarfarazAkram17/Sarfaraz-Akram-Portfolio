@@ -11,9 +11,9 @@ const Projects = () => {
     <div className="p-3 md:p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {projects.map((project) => (
         <div
-          key={project.id}
+          key={project.name}
           data-aos={project.aos}
-          className="bg-[#1e2b3a] transf rounded-2xl shadow-md text-white flex flex-col group border border-transparent hover:border-purple-600 hover:shadow-2xl transition-all duration-500"
+          className="bg-[#1e2b3a] rounded-2xl shadow-md text-white flex flex-col border border-transparent hover:border-[#009D8F] hover:shadow-2xl transition-all duration-500"
         >
           {/* Image */}
           <div className="p-4 pb-0 flex justify-center">
@@ -21,7 +21,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full transition-transform duration-500 hover:scale-110"
               />
             </div>
           </div>
@@ -32,37 +32,50 @@ const Projects = () => {
             <h3 className="text-xl font-bold mb-2">{project.title}</h3>
 
             {/* Description */}
-            <p className="text-sm text-white/80 mb-3">
-              {project.desc}{" "}
-              <Link to={`/project/${project.id}`}>
+            <div className="mb-3">
+              <p className="text-sm text-white/80 line-clamp-3">
+                {project.desc}{" "}
+              </p>
+              <Link to={`/project/${project.name}`}>
                 <span className="text-sky-400 hover:underline font-medium cursor-pointer">
                   read more
                 </span>
               </Link>
-            </p>
+            </div>
 
             {/* Buttons */}
             <div className="flex items-center justify-between">
               <a
                 href={project.liveLink}
                 target="_blank"
-                className="text-sm hover:underline hover:text-blue-500 flex items-center gap-2 text-blue-400 font-bold"
+                className="text-xs sm:text-sm group hover:underline hover:text-blue-500 flex items-center gap-2 text-blue-400 font-bold"
               >
-                Live Demo <HiArrowTopRightOnSquare size={18} />
+                Live Demo{" "}
+                <span className="-ml-1 mt-0.5 text-xs sm:text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <HiArrowTopRightOnSquare />
+                </span>
               </a>
+
               <div className="flex gap-2 items-center">
                 <a
                   href={project.github}
                   target="_blank"
-                  className="btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
+                  className="group btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
                 >
-                  Github <GoArrowUpRight size={15} />
+                  Github
+                  <span className="-ml-1 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <GoArrowUpRight size={15} />
+                  </span>
                 </a>
+
                 <Link
-                  to={`/project/${project.id}`}
-                  className="btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
+                  to={`/project/${project.name}`}
+                  className="group btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
                 >
-                  Details <BsArrowRight size={15} />
+                  Details
+                  <span className="-ml-1 transition-transform duration-300 group-hover:translate-x-0.5">
+                    <BsArrowRight size={15} />
+                  </span>
                 </Link>
               </div>
             </div>

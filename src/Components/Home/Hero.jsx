@@ -80,7 +80,7 @@ const Hero = () => {
             <img
               src="https://i.ibb.co/d45mZWMX/Portfolio-image-modified.png"
               alt="Sarfaraz Akram"
-              className="w-72 h-72 md:w-[21rem] md:h-[21rem] rounded-full object-cover"
+              className="w-60 h-60 sm:w-[21rem] sm:h-[21rem] rounded-full object-cover"
             />
           </div>
         </Tilt>

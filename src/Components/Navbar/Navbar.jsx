@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-3 z-50 max-w-3xl mx-auto rounded-xl backdrop-blur-xl bg-white/5 border border-white/10">
+    <header className="sticky top-4 z-50 max-w-3xl mx-auto rounded-xl backdrop-blur-xl bg-white/5 border border-white/10">
       <div className="px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600">
