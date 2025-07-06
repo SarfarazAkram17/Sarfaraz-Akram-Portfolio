@@ -5,10 +5,15 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { SlLayers } from "react-icons/sl";
 import { LuCodeXml } from "react-icons/lu";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { useEffect } from "react";
 
 const ProjectDetails = () => {
   const { projectName } = useParams();
   const project = projectsData.find((p) => p.name === projectName);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 text-white">
@@ -39,7 +44,7 @@ const ProjectDetails = () => {
             <h1 className="capitalize text-4xl sm:text-5xl font-bold text-white/80">
               {project.name}
             </h1>
-            <div className="mt-4 mb-10 w-14 md:w-16 animate-pulse h-1 rounded-full bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
+            <div className="mt-4 mb-10 w-16 md:w-20 animate-pulse h-1 rounded-full bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
           </div>
 
           <p className="text-white/70 leading-relaxed mb-6">{project.desc}</p>

@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import RootLayout from "./Layout/RootLayout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
 import ProjectDetails from "./Components/ProjectDetails/ProjectDetails.jsx";
 import HomeLayout from "./Layout/HomeLayout.jsx";
 
-AOS.init({ duration: 1000, anchorPlacement: "top-bottom" });
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({ duration: 1000 });
 
 const router = createBrowserRouter([
   {

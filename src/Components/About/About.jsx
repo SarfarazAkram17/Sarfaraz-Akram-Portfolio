@@ -1,11 +1,9 @@
-import React from "react";
 import { Link } from "react-scroll";
 import { LuCodeXml } from "react-icons/lu";
 import { BsArrowDownRight } from "react-icons/bs";
 import { PiCertificate } from "react-icons/pi";
 import { LiaMedalSolid } from "react-icons/lia";
 import { FaGoogleScholar } from "react-icons/fa6";
-import Tilt from "react-parallax-tilt";
 
 const About = () => {
   return (
@@ -31,7 +29,7 @@ const About = () => {
 
       <div
         data-aos="fade-left"
-        className="flex justify-center flex-col gap-6 mt-6 sm:flex-row items-center"
+        className="flex justify-center gap-4 mt-6 items-center"
       >
         <a
           className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
@@ -42,13 +40,14 @@ const About = () => {
         <Link
           to="portfolio"
           smooth={true}
+          offset={-80}  // <--- Offset added here to fix over-scroll
           className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300 cursor-pointer"
         >
           View Projects
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-14 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 items-center">
         <Link
           data-aos="fade-up-right"
           to="portfolio"

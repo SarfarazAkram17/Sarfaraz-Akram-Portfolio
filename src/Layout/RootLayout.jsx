@@ -7,6 +7,9 @@ import { ToastContainer } from "react-toastify";
 import { Outlet } from "react-router";
 import CopyRIght from "../Components/CopyRIght/CopyRIght";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const RootLayout = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
 
@@ -22,8 +25,30 @@ const RootLayout = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // AOS init for animations repeated every time element is visible
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, // Animate every time element enters viewport
+      mirror: true, // Animate on scroll up as well
+    });
+
+    const refreshAOS = () => {
+      AOS.refresh();
+    };
+
+    window.addEventListener("resize", refreshAOS);
+    window.addEventListener("scroll", refreshAOS);
+
+    return () => {
+      window.removeEventListener("resize", refreshAOS);
+      window.removeEventListener("scroll", refreshAOS);
+    };
+  }, []);
+
   return (
-    <div>
+    <div id="root">
       <ToastContainer theme="dark"></ToastContainer>
       <CenterGlowBackground></CenterGlowBackground>
       <div className="sticky top-0 z-50">

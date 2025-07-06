@@ -30,6 +30,8 @@
   border-radius: 0 !important;
 }
 
-body {
-  overflow-x: hidden;
+@media screen and (min-width: 320px) {
+  #root {
+    overflow: hidden;
+  }
 }
