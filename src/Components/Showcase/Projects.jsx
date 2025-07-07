@@ -13,7 +13,7 @@ const Projects = () => {
         <div
           key={project.name}
           data-aos={project.aos}
-          className="bg-[#1e2b3a] rounded-2xl shadow-md text-white flex flex-col border border-transparent hover:border-[#009D8F] hover:shadow-2xl transition-all duration-500"
+          className="group bg-[#1e2b3a] rounded-2xl shadow-md text-white flex flex-col border border-transparent hover:border-[#009D8F] hover:shadow-2xl transition-all duration-500"
         >
           {/* Image */}
           <div className="p-4 pb-0 flex justify-center">
@@ -21,7 +21,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="absolute inset-0 w-full h-full transition-transform duration-500 hover:scale-110"
+                className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-110"
               />
               {/* Status Badge */}
               {project.status && (

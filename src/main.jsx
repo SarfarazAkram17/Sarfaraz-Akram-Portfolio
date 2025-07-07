@@ -6,11 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import ProjectDetails from "./Components/ProjectDetails/ProjectDetails.jsx";
 import HomeLayout from "./Layout/HomeLayout.jsx";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init({ duration: 1000 });
-
 const router = createBrowserRouter([
   {
     path: "/",
