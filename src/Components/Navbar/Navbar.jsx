@@ -60,8 +60,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-xl border border-white/10 w-full max-w-3xl rounded-xl">
-      <div className="px-4 sm:px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-2 left-0 right-0 mx-auto z-50 w-[calc(100%-1rem)] sm:w-full sm:max-w-3xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl">
+      <div className="px-2 sm:px-4 py-4 flex items-center justify-between">
+        {/* Logo / Name */}
         <h1
           onClick={() => handleScrollTo("home")}
           className="cursor-pointer text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600"
@@ -69,6 +70,7 @@ const Navbar = () => {
           SARFARAZ AKRAM
         </h1>
 
+        {/* Desktop Navigation */}
         <nav className="hidden sm:flex space-x-8 text-sm font-semibold text-white">
           {navLinks.map(({ label, target }) => (
             <button
@@ -88,11 +90,13 @@ const Navbar = () => {
           ))}
         </nav>
 
+        {/* Mobile Hamburger */}
         <div className="sm:hidden">
           <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
         </div>
       </div>
 
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="sm:hidden border-t border-white/10 backdrop-blur-xl bg-white/5">
           <nav className="flex flex-col items-center py-4 space-y-4 text-white font-semibold">

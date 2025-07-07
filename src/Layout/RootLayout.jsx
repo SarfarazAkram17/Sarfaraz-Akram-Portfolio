@@ -51,7 +51,7 @@ const RootLayout = () => {
     <div id="root">
       <ToastContainer theme="dark"></ToastContainer>
       <CenterGlowBackground></CenterGlowBackground>
-      <div className="sticky top-0 z-50">
+      <div className="fixed top-0 z-[9999] w-full">
         <ProgressBar
           percent={scrollPercent}
           filledBackground="linear-gradient(to left, #60A5FA, #0891B2, #16A34A)"

@@ -92,7 +92,7 @@ const Hero = () => {
       {/* Right: Image */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Tilt>
-          <div className="relative p-2 border-2 border-cyan-400 rounded-full">
+          <div className="relative p-1 border-2 border-cyan-400 rounded-full">
             <img
               src={myPic}
               alt="Sarfaraz Akram"
