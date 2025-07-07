@@ -22,8 +22,8 @@ const projectData = [
         icon: "📦",
         title: "Parcel Management",
         points: [
-          "Create, edit, and delete parcel records",
-          "Track delivery status in real-time",
+          "Send Parcels and delete parcel records",
+          // "Track delivery status in real-time",
         ],
       },
       {
@@ -31,40 +31,40 @@ const projectData = [
         title: "Role-Based Access Control",
         points: [
           "Separate dashboards for Admin, Rider, and User",
-          "Riders only view parcels assigned to them",
+          "Only admin can assign rider to a parcel etc.",
+          "Riders only view parcels assigned to them etc.",
+          "Users can see their sended parcels etc.",
         ],
       },
       {
         icon: "💳",
         title: "Secure Payments",
         points: [
-          "Stripe integration for credit/debit card payments",
+          "Stripe integration for card payments",
           "Store and display payment history on a dedicated page",
         ],
       },
       {
         icon: "📊",
         title: "Analytics Dashboard",
-        points: [
-          "Visualize parcel stats with dynamic pie charts",
-          "Admin overview of total revenue and parcel flow",
-        ],
+        points: ["Visualize parcel stats with dynamic pie charts"],
       },
       {
         icon: "⚙️",
         title: "Interactive Interface",
         points: [
           "Responsive UI with smooth animations",
-          "Delivery cost auto-calculation while creating parcels",
+          "Delivery cost auto-calculation while sending parcels",
         ],
       },
     ],
+    status: "Not fully Complete",
     image: profast,
     github: "https://github.com/SarfarazAkram17/Profast-Client",
     liveLink: "https://profast-sarfaraz-akram.netlify.app",
     aos: "fade-up-right",
     futurePlan:
-      "Enhance dashboard interactivity, add parcel tracking, and implement advanced delivery logic with more condition checks.",
+      "Make rider and user dashboard and tracking feature implement and more better delivery login and condition checks",
   },
   {
     name: "studify",
@@ -82,8 +82,8 @@ const projectData = [
         icon: "📝",
         title: "Assignment Management",
         points: [
-          "Create, update, and delete assignments with details",
-          "Define title, description, marks, and deadlines",
+          "Create, update, and delete assignments with detailed information",
+          "Set titles, descriptions, marks, and deadlines",
         ],
       },
       {
@@ -91,7 +91,7 @@ const projectData = [
         title: "Peer Collaboration",
         points: [
           "Peer-to-peer marking and review system",
-          "Interactive submission and evaluation flow",
+          "Interactive submission and evaluation workflow",
         ],
       },
       {
@@ -99,14 +99,14 @@ const projectData = [
         title: "Submission & Grading",
         points: [
           "Upload completed assignments with file support",
-          "Grades and feedback shown in user profile",
+          "Grades and feedback displayed in user profiles",
         ],
       },
       {
         icon: "🔥",
         title: "Secure Authentication",
         points: [
-          "Firebase Auth for account creation and login",
+          "Firebase Authentication for account creation and login",
           "User-specific data isolation and protection",
         ],
       },
@@ -114,17 +114,18 @@ const projectData = [
         icon: "🎨",
         title: "Modern UI/UX",
         points: [
-          "Responsive layout with Tailwind CSS",
+          "Responsive layout built with Tailwind CSS and DaisyUI",
           "Minimalist and accessible user experience",
         ],
       },
     ],
+    status: "Completed",
     image: studify,
     github: "https://github.com/SarfarazAkram17/Studify-Client",
     liveLink: "https://assignment-11-sarfaraz-akram.netlify.app",
     aos: "fade-up",
     futurePlan:
-      "Improve dashboard interactivity, enhance visual design, and build a more comprehensive footer with essential links.",
+      "Implement dashboard and improve UI/UX design.",
   },
   {
     name: "taskwave",
@@ -137,48 +138,34 @@ const projectData = [
         title: "Task Lifecycle",
         points: [
           "Post, update, and delete freelance tasks",
-          "Includes budget, timeline, and category support",
+          "Includes budget, deadline, and category support",
         ],
       },
       {
         icon: "🔍",
         title: "Smart Bidding System",
-        points: [
-          "Freelancers submit proposals with custom messages",
-          "Employers can browse and accept relevant bids",
-        ],
-      },
-      {
-        icon: "📄",
-        title: "Freelancer Tools",
-        points: [
-          "Manage bids and track assigned tasks",
-          "Submit final deliverables for employer review",
-        ],
+        points: ["Freelancers bid for tasks easily"],
       },
       {
         icon: "🚀",
         title: "Employer Features",
-        points: [
-          "View all bids per task in a clean table",
-          "Filter and choose freelancers based on quality",
-        ],
+        points: ["View all bids per task in a clean table"],
       },
       {
         icon: "🎯",
         title: "Refined User Interface",
         points: [
-          "Polished layout using Tailwind CSS",
-          "Hover animations, clean spacing, and responsive design",
+          "Polished layout and fully responsive design using Tailwind CSS and DaisyUI",
         ],
       },
     ],
+    status: "Completed",
     image: taskwave,
     github: "https://github.com/SarfarazAkram17/Taskwave-Client",
     liveLink: "https://assignment-10-sarfaraz-akram.netlify.app",
     aos: "fade-up-left",
     futurePlan:
-      "Enhance dashboard experience, refine UI/UX further, and introduce advanced filtering and task-tracking tools.",
+      "Implement dashboard, improve UI/UX design, and implement fully functional footer navigation.",
   },
 ];
 

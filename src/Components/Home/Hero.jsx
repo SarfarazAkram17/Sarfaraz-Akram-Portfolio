@@ -2,6 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
 import { FaGithub } from "react-icons/fa";
 import { LiaLinkedinIn } from "react-icons/lia";
+import myPic from '../../assets/professional pic-modified.png'
 
 const Hero = () => {
   // Scroll handler for correct offset matching your header height
@@ -20,7 +21,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-4 pt-20 gap-8">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-4 pt-36 gap-8">
       {/* Left: Text */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
         <h2 className="text-xl font-bold">Hi 👋, I'm</h2>
@@ -93,9 +94,9 @@ const Hero = () => {
         <Tilt>
           <div className="relative p-2 border-2 border-cyan-400 rounded-full">
             <img
-              src="https://i.ibb.co/d45mZWMX/Portfolio-image-modified.png"
+              src={myPic}
               alt="Sarfaraz Akram"
-              className="w-60 h-60 sm:w-[21rem] sm:h-[21rem] rounded-full object-cover"
+              className="w-60 h-60 sm:w-[21rem] sm:h-[21rem] rounded-full"
             />
           </div>
         </Tilt>

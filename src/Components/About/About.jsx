@@ -69,7 +69,7 @@ const About = () => {
             </div>
             <div className="space-y-16">
               <h2 data-aos="fade-up-right" className="text-3xl font-bold">
-                2
+                3
               </h2>
               <BsArrowDownRight />
             </div>

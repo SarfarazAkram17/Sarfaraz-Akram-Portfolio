@@ -23,6 +23,15 @@ const Projects = () => {
                 alt={project.title}
                 className="absolute inset-0 w-full h-full transition-transform duration-500 hover:scale-110"
               />
+              {/* Status Badge */}
+              {project.status && (
+                <div
+                  data-aos="fade-down"
+                  className="absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-semibold text-white bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 animate-pulse select-none shadow-lg"
+                >
+                  {project.status}
+                </div>
+              )}
             </div>
           </div>
 
@@ -48,6 +57,7 @@ const Projects = () => {
               <a
                 href={project.liveLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs sm:text-sm group hover:underline hover:text-blue-500 flex items-center gap-2 text-blue-400 font-bold"
               >
                 Live Demo{" "}
@@ -60,6 +70,7 @@ const Projects = () => {
                 <a
                   href={project.github}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group btn btn-xs rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
                 >
                   Github

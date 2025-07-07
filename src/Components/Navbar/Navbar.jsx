@@ -8,17 +8,24 @@ const navLinks = [
   { label: "Contact", target: "contact" },
 ];
 
+function debounce(func, wait = 20) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Scroll handler with dynamic header height to prevent extra scroll
   const handleScrollTo = (target) => {
     const el = document.getElementById(target);
-    const header = document.querySelector("header"); // get actual header height dynamically
+    const header = document.querySelector("header");
 
     if (el && header) {
-      const headerOffset = header.offsetHeight + 16; // add a little buffer for padding/margin
+      const headerOffset = header.offsetHeight + 16;
       const elementPosition = el.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -27,14 +34,12 @@ const Navbar = () => {
         behavior: "smooth",
       });
 
-      setActiveSection(target);
       setIsOpen(false);
     }
   };
 
-  // Update active section on scroll
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = debounce(() => {
       let closest = "";
       let closestOffset = Infinity;
       navLinks.forEach(({ target }) => {
@@ -48,21 +53,22 @@ const Navbar = () => {
         }
       });
       setActiveSection(closest);
-    };
+    }, 50);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="sticky top-4 z-50 max-w-3xl mx-auto rounded-xl backdrop-blur-xl bg-white/5 border border-white/10">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-xl border border-white/10 w-full max-w-3xl rounded-xl">
       <div className="px-4 sm:px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600">
+        <h1
+          onClick={() => handleScrollTo("home")}
+          className="cursor-pointer text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600"
+        >
           SARFARAZ AKRAM
         </h1>
 
-        {/* Desktop Navigation */}
         <nav className="hidden sm:flex space-x-8 text-sm font-semibold text-white">
           {navLinks.map(({ label, target }) => (
             <button
@@ -75,22 +81,18 @@ const Navbar = () => {
               {label}
               <span
                 className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
-                  activeSection === target
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
+                  activeSection === target ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               ></span>
             </button>
           ))}
         </nav>
 
-        {/* Mobile Toggle Button */}
-       <div className="sm:hidden">
-         <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
-       </div>
+        <div className="sm:hidden">
+          <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
+        </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="sm:hidden border-t border-white/10 backdrop-blur-xl bg-white/5">
           <nav className="flex flex-col items-center py-4 space-y-4 text-white font-semibold">
