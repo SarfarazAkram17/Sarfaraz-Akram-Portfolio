@@ -41,7 +41,7 @@ const About = () => {
           to="portfolio"
           smooth={true}
           offset={-80}  // <--- Offset added here to fix over-scroll
-          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300 cursor-pointer"
+          className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
         >
           View Projects
         </Link>
