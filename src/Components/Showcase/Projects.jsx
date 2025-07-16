@@ -13,11 +13,11 @@ const Projects = () => {
         <div
           key={project.name}
           data-aos={project.aos}
-          className="group bg-[#1e2b3a] rounded-2xl shadow-md text-white flex flex-col border border-transparent hover:border-[#009D8F] hover:shadow-2xl transition-all duration-500"
+          className="bg-[#1e2b3a] rounded-2xl shadow-md text-white flex flex-col border border-transparent hover:border-[#009D8F] hover:shadow-2xl transition-all duration-500"
         >
           {/* Image */}
           <div className="p-4 pb-0 flex justify-center">
-            <div className="relative w-full h-48 rounded-lg overflow-hidden">
+            <div className="group relative w-full h-48 rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
@@ -54,15 +54,18 @@ const Projects = () => {
 
             {/* Buttons */}
             <div className="flex items-center justify-between">
+              {/* ✅ This 'group' is local to Live Demo only */}
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs sm:text-sm group hover:underline hover:text-blue-500 flex items-center gap-2 text-blue-400 font-bold"
+                className="text-xs sm:text-sm hover:underline hover:text-blue-500 flex items-center gap-2 text-blue-400 font-bold"
               >
-                Live Demo{" "}
-                <span className="-ml-1 mt-0.5 text-xs sm:text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <HiArrowTopRightOnSquare />
+                <span className="group flex items-center gap-1">
+                  Live Demo{" "}
+                  <span className="mt-0.5 text-xs sm:text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <HiArrowTopRightOnSquare />
+                  </span>
                 </span>
               </a>
 

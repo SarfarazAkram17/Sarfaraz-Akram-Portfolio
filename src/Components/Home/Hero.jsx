@@ -2,14 +2,13 @@ import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
 import { FaGithub } from "react-icons/fa";
 import { LiaLinkedinIn } from "react-icons/lia";
-import myPic from '../../assets/professional pic-modified.png'
+import myPic from '../../assets/professional pic.png'
 
 const Hero = () => {
-  // Scroll handler for correct offset matching your header height
   const handleScrollTo = (target) => {
     const el = document.getElementById(target);
     if (el) {
-      const headerOffset = window.innerWidth < 768 ? 72 : 96;
+      const headerOffset = window.innerWidth < 768 ? 80 : 96;
       const elementPosition = el.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -92,11 +91,11 @@ const Hero = () => {
       {/* Right: Image */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Tilt>
-          <div className="relative p-1 border-2 border-cyan-400 rounded-full">
+          <div className="relative p-1 border-2 border-cyan-400 rounded-lg">
             <img
               src={myPic}
               alt="Sarfaraz Akram"
-              className="w-60 h-60 sm:w-[21rem] sm:h-[21rem] rounded-full"
+              className="w-60 h-auto"
             />
           </div>
         </Tilt>

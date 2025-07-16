@@ -1,75 +1,90 @@
 import taskwave from "./assets/taskwave.png";
-import profast from "./assets/profast.png";
+import tournest from "./assets/tournest.png";
 import studify from "./assets/studify.png";
 
 const projectData = [
   {
-    name: "profast",
-    title: "ProFast – Parcel Delivery System (FullStack)",
-    desc: "ProFast is a complete logistics management platform that enables users to create parcels, track delivery statuses, and handle payments, with dedicated dashboards for Admins, Riders, and Customers.",
+    name: "tournest",
+    title: "TourNest – Tourism Management System (FullStack)",
+    desc: "TourNest is a complete tourism management platform that allows users to book tour packages, apply as tour guides, share stories, and make secure payments, all under a role-based access-controlled environment.",
     techs: [
-      "Tailwind CSS",
       "React.js",
-      "Tanstack Query",
+      "Tailwind CSS",
       "Express.js",
-      "Stripe",
       "MongoDB",
-      "Firebase Backend Authentication",
-      "Role Verification",
+      "Firebase Auth",
+      "JWT",
+      "Stripe",
+      "TanStack Query",
+      "React Hook Form",
+      "React Share",
     ],
     features: [
       {
-        icon: "📦",
-        title: "Parcel Management",
+        icon: "🌍",
+        title: "Tour Package Booking",
         points: [
-          "Send Parcels and delete parcel records",
-          // "Track delivery status in real-time",
+          "Explore tour packages in all trips page",
+          "Book tours with Stripe payment integration",
+          "Prevent duplicate unpaid bookings",
         ],
       },
       {
         icon: "🧑‍💼",
-        title: "Role-Based Access Control",
+        title: "Role-Based Dashboards",
         points: [
-          "Separate dashboards for Admin, Rider, and User",
-          "Only admin can assign rider to a parcel etc.",
-          "Riders only view parcels assigned to them etc.",
-          "Users can see their sended parcels etc.",
+          "Separate dashboards for Admin, Tourist, and Tour Guide",
+          "Tour Guides can view assigned tours",
+          "Admins can approve guide applications, manage users and packages",
         ],
       },
       {
-        icon: "💳",
-        title: "Secure Payments",
+        icon: "📖",
+        title: "Story Sharing System",
         points: [
-          "Stripe integration for card payments",
-          "Store and display payment history on a dedicated page",
+          "All users can create, edit, and delete travel stories",
+          "Random stories and community page with facebook share button",
+          "Image uploading via Cloudinary",
+        ],
+      },
+      {
+        icon: "🧾",
+        title: "Guide Applications & Approval",
+        points: [
+          "Tourists can apply to become tour guides",
+          "Admin can approve/reject applications",
         ],
       },
       {
         icon: "📊",
-        title: "Analytics Dashboard",
-        points: ["Visualize parcel stats with dynamic pie charts"],
+        title: "Admin Analytics",
+        points: [
+          "Admin can see stats like total payments, users, tour guides, packages, stories in his dashboard",
+          "Dynamic data from MongoDB queries",
+        ],
       },
       {
-        icon: "⚙️",
-        title: "Interactive Interface",
+        icon: "🎯",
+        title: "Modern UX/UI",
         points: [
-          "Responsive UI with smooth animations",
-          "Delivery cost auto-calculation while sending parcels",
+          "Fully responsive layout using Tailwind and DaisyUI",
+          "Animations using Framer Motion",
+          "Smart forms with validation and feedback",
         ],
       },
     ],
-    status: "Not fully Complete",
-    image: profast,
-    github: "https://github.com/SarfarazAkram17/Profast-Client",
-    liveLink: "https://profast-sarfaraz-akram.netlify.app",
+    status: "Completed",
+    image: tournest,
+    github: "https://github.com/SarfarazAkram17/TourNest-Client",
+    liveLink: "https://tournest-sarfaraz-akram.netlify.app",
     aos: "fade-up-right",
     futurePlan:
-      "Make rider and user dashboard and tracking feature implement and more better delivery login and condition checks",
+      "Make notification system to notify all users when a tour package is created.",
   },
   {
     name: "studify",
     title: "Studify – Group Study Platform (FullStack)",
-    desc: "Studify is a collaborative academic platform where students can create assignments, submit work, and peer-review submissions with real-time scoring and feedback.",
+    desc: "Studify is a group study platform where students can create assignments, submit work, and peer-review submissions with scoring and feedback.",
     techs: [
       "React.js",
       "Firebase",
@@ -124,13 +139,12 @@ const projectData = [
     github: "https://github.com/SarfarazAkram17/Studify-Client",
     liveLink: "https://assignment-11-sarfaraz-akram.netlify.app",
     aos: "fade-up",
-    futurePlan:
-      "Implement dashboard and improve UI/UX design.",
+    futurePlan: "Implement dashboard and improve UI/UX design.",
   },
   {
     name: "taskwave",
     title: "TaskWave – Freelancing Platform for Micro Tasks (FullStack)",
-    desc: "TaskWave is a modern freelance platform for short-term tasks where employers post jobs, and freelancers bid and complete them through a clean dashboard experience.",
+    desc: "TaskWave is a modern freelance platform for small tasks where employers post jobs, and freelancers bid for them.",
     techs: ["Tailwind CSS", "React.js", "Express.js", "MongoDB", "Firebase"],
     features: [
       {
