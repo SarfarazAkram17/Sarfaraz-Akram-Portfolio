@@ -25,7 +25,10 @@ const Navbar = () => {
     const header = document.querySelector("header");
 
     if (el && header) {
-      const headerOffset = header.offsetHeight + 16;
+      const headerOffset =
+        window.innerWidth > 640
+          ? header.offsetHeight
+          : header.offsetHeight - 185;
       const elementPosition = el.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
 

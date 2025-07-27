@@ -17,7 +17,7 @@ const Projects = () => {
         >
           {/* Image */}
           <div className="p-4 pb-0 flex justify-center">
-            <div className="group relative w-full h-48 rounded-lg overflow-hidden">
+            <div className="group relative w-full h-48 sm:h-72 md:h-56 lg:h-48 rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
