@@ -8,14 +8,6 @@ const navLinks = [
   { label: "Contact", target: "contact" },
 ];
 
-function debounce(func, wait = 20) {
-  let timeout;
-  return (...args) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -29,6 +21,7 @@ const Navbar = () => {
         window.innerWidth > 640
           ? header.offsetHeight
           : header.offsetHeight - 185;
+
       const elementPosition = el.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -42,9 +35,10 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const handleScroll = debounce(() => {
+    const handleScroll = () => {
       let closest = "";
       let closestOffset = Infinity;
+
       navLinks.forEach(({ target }) => {
         const el = document.getElementById(target);
         if (el) {
@@ -55,8 +49,9 @@ const Navbar = () => {
           }
         }
       });
+
       setActiveSection(closest);
-    }, 50);
+    };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -100,30 +95,32 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Dropdown Menu */}
-      {isOpen && (
-        <div className="sm:hidden border-t border-white/10 backdrop-blur-xl bg-white/5">
-          <nav className="flex flex-col items-center py-4 space-y-4 text-white font-semibold">
-            {navLinks.map(({ label, target }) => (
-              <button
-                key={target}
-                onClick={() => handleScrollTo(target)}
-                className={`relative group cursor-pointer transition-all ${
-                  activeSection === target ? "active-link" : ""
+      <div
+        className={`sm:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        } bg-white/5 backdrop-blur-xl border border-white/10 rounded-b-xl`}
+      >
+        <nav className="flex flex-col items-center py-4 space-y-4 text-white font-semibold">
+          {navLinks.map(({ label, target }) => (
+            <button
+              key={target}
+              onClick={() => handleScrollTo(target)}
+              className={`relative group cursor-pointer transition-all ${
+                activeSection === target ? "active-link" : ""
+              }`}
+            >
+              {label}
+              <span
+                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
+                  activeSection === target
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
                 }`}
-              >
-                {label}
-                <span
-                  className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
-                    activeSection === target
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
-                  }`}
-                ></span>
-              </button>
-            ))}
-          </nav>
-        </div>
-      )}
+              ></span>
+            </button>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 };
