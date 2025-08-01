@@ -40,17 +40,18 @@ const About = () => {
         <Link
           to="portfolio"
           smooth={true}
-          offset={-80}  // <--- Offset added here to fix over-scroll
+          offset={-60}
           className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
         >
           View Projects
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 items-stretch">
         <Link
           data-aos="fade-up-right"
           to="portfolio"
+          offset={-60}
           smooth={true}
           className="cursor-pointer"
         >
@@ -79,6 +80,7 @@ const About = () => {
         <Link
           data-aos="fade-down-right"
           to="portfolio"
+          offset={-60}
           smooth={true}
           className="cursor-pointer"
         >
@@ -107,6 +109,7 @@ const About = () => {
         <Link
           data-aos="fade-down-left"
           to="portfolio"
+          offset={-60}
           smooth={true}
           className="cursor-pointer"
         >
@@ -135,6 +138,7 @@ const About = () => {
         <Link
           data-aos="fade-up-left"
           to="portfolio"
+          offset={-60}
           smooth={true}
           className="cursor-pointer"
         >
