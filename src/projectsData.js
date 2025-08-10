@@ -204,7 +204,7 @@ const projectData = [
     status: "Completed",
     image: studify,
     github: "https://github.com/SarfarazAkram17/Studify-Client",
-    liveLink: "https://assignment-11-sarfaraz-akram.netlify.app",
+    liveLink: "https://studify-sarfaraz-akram.netlify.app",
     aos: "fade-up-left",
   },
   {
@@ -242,7 +242,7 @@ const projectData = [
     status: "Completed",
     image: taskwave,
     github: "https://github.com/SarfarazAkram17/Taskwave-Client",
-    liveLink: "https://assignment-10-sarfaraz-akram.netlify.app",
+    liveLink: "https://taskwave-sarfaraz-akram.netlify.app",
     aos: "fade-up-right",
   },
 ];
