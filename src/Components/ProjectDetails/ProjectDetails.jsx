@@ -111,14 +111,22 @@ const ProjectDetails = () => {
               </a>
             </div>
 
-            {project.futurePlan && (
+            
               <div className="mt-15">
-                <h2 className="text-3xl mb-4 font-semibold">Future Plans :</h2>
+                <h2 className="text-3xl mb-4 font-semibold">Challenges I faced:</h2>
                 <p className="text-white/80 leading-relaxed">
-                  {project.futurePlan}
+                  {project.challanges}
                 </p>
               </div>
-            )}
+
+            
+              <div className="mt-15">
+                <h2 className="text-3xl mb-4 font-semibold">Future Plans:</h2>
+                <p className="text-white/80 leading-relaxed">
+                  {project.futurePlan ? project.futurePlan : 'No future plans yet.'}
+                </p>
+              </div>
+            
           </div>
         </div>
 

@@ -6,6 +6,8 @@ import taskwave from "./assets/taskwave.png";
 const projectData = [
   {
     name: "Sam's Kitchen",
+    challanges: "Make notification system and conditional backend actions.",
+    futurePlan: "Implement react-share to share food items.",
     title:
       "Sam's Kitchen – Food Delivery & Kitchen management System (FullStack)",
     desc: "Sam's Kitchen is a food delivery and management platform where users can order food, riders can deliver orders, and admins can manage the entire kitchen system, including foods, payments, and rider assignments.",
@@ -69,10 +71,10 @@ const projectData = [
     github: "https://github.com/SarfarazAkram17/Sams-Kitchen-Client",
     liveLink: "https://sams-kitchen.netlify.app",
     aos: "fade-up-right",
-    futurePlan: "Implement react-share to share food items.",
   },
   {
     name: "tournest",
+    challanges: "Making post story on facebook using react-share.",
     title: "TourNest – Tourism Management System (FullStack)",
     desc: "TourNest is a complete tourism management platform that allows users to book tour packages, apply as tour guides, share stories, and make secure payments, all under a role-based access-controlled environment.",
     techs: [
@@ -150,6 +152,7 @@ const projectData = [
   {
     name: "studify",
     title: "Studify – Group Study Platform (FullStack)",
+    challanges: "Implement JWT.",
     desc: "Studify is a group study platform where students can create assignments, submit work, and peer-review submissions with scoring and feedback.",
     techs: [
       "React.js",
@@ -210,6 +213,7 @@ const projectData = [
   {
     name: "taskwave",
     title: "TaskWave – Freelancing Platform for Micro Tasks (FullStack)",
+    challanges: "Make the backend and apply conditions.",
     desc: "TaskWave is a modern freelance platform for small tasks where employers post jobs, and freelancers bid for them.",
     techs: ["Tailwind CSS", "React.js", "Express.js", "MongoDB", "Firebase"],
     features: [

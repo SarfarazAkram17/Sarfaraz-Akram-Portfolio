@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Cursor from "../Components/Cursor/Cursor";
-import CenterGlowBackground from "../Components/CenterGlowBackground/CenterGlowBackground";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import { ToastContainer } from "react-toastify";
@@ -50,7 +49,6 @@ const RootLayout = () => {
   return (
     <div id="root">
       <ToastContainer theme="dark"></ToastContainer>
-      <CenterGlowBackground></CenterGlowBackground>
       <div className="fixed top-0 z-[9999] w-full">
         <ProgressBar
           percent={scrollPercent}

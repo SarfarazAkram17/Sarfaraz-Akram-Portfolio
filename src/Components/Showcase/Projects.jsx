@@ -41,11 +41,11 @@ const Projects = () => {
             {/* Content */}
             <div className="p-4 flex-1 flex flex-col justify-between">
               {/* Title */}
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <h3 className="text-lg font-bold mb-2">{project.title}</h3>
 
               {/* Description */}
               <div className="mb-3">
-                <p className="text-sm text-white/80 line-clamp-3">
+                <p className="text-sm text-white/80 line-clamp-2">
                   {project.desc}{" "}
                 </p>
                 <Link to={`/project/${project.name}`}>

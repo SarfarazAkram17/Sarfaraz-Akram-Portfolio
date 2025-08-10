@@ -2,23 +2,10 @@ import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
 import { FaGithub } from "react-icons/fa";
 import { LiaLinkedinIn } from "react-icons/lia";
-import myPic from '../../assets/professional pic.jpeg'
+import myPic from "../../assets/professional pic.jpeg";
+import { Link } from "react-scroll";
 
 const Hero = () => {
-  const handleScrollTo = (target) => {
-    const el = document.getElementById(target);
-    if (el) {
-      const headerOffset = window.innerWidth < 768 ? 80 : 96;
-      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section className="flex flex-col-reverse md:flex-row items-center justify-between px-4 pt-36 gap-8">
       {/* Left: Text */}
@@ -54,12 +41,12 @@ const Hero = () => {
 
         <div className="flex items-center gap-10">
           {/* Changed Link to button with manual scroll */}
-          <button
-            onClick={() => handleScrollTo("contact")}
+          <a
             className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
+            download
           >
-            Let’s Connect
-          </button>
+            Download Resume
+          </a>
 
           <div className="flex gap-4 items-center">
             <a
@@ -92,11 +79,7 @@ const Hero = () => {
       <div className="w-full md:w-1/2 flex justify-center">
         <Tilt>
           <div className="relative p-1 border-2 border-cyan-400 rounded-lg">
-            <img
-              src={myPic}
-              alt="Sarfaraz Akram"
-              className="w-60 h-auto"
-            />
+            <img src={myPic} alt="Sarfaraz Akram" className="w-60 h-auto" />
           </div>
         </Tilt>
       </div>

@@ -58,7 +58,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed top-2 left-0 right-0 mx-auto z-50 w-[calc(100%-1rem)] md:w-full md:max-w-3xl bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl">
+    <header className="fixed top-2 left-0 right-0 mx-auto z-50 w-[calc(100%-1rem)] md:w-full md:max-w-3xl bg-white/15 backdrop-blur-xl border border-white/10 rounded-xl">
       <div className="px-2 sm:px-4 py-4 flex items-center justify-between">
         {/* Logo / Name */}
         <h1
@@ -96,9 +96,9 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`sm:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`sm:hidden overflow-hidden z-50 transition-all duration-500 ease-in-out ${
           isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-        } bg-white/5 backdrop-blur-xl border border-white/10 rounded-b-xl`}
+        } bg-white/20 border border-white/10 rounded-b-xl`}
       >
         <nav className="flex flex-col items-center py-4 space-y-4 text-white font-semibold">
           {navLinks.map(({ label, target }) => (

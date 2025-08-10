@@ -19,24 +19,35 @@ const About = () => {
         data-aos="fade-right"
         className="text-white/70 leading-relaxed text-sm text-center max-w-3xl mx-auto"
       >
-        Hello, I'm Sarfaraz Akram — passionate about building efficient,
-        scalable, and user-friendly web applications. With strong full-stack
-        development skills, I continuously explore the latest technologies to
-        enhance my craft. Dedicated to lifelong learning, I strive to make a
-        meaningful impact in the tech industry and aim to expand my expertise
-        into AI and data science in the coming years.
+        Hi, I'm Sarfaraz Akram. My programming journey started out of curiosity
+        about how the web works, and that spark turned into a passion for
+        coding. I love how programming stretches my thinking and sharpens my
+        problem-solving skills. What excites me most is building user-friendly,
+        scalable web applications that make a real difference.
+        <br />
+        As a full-stack developer, I enjoy working on both the front-end and
+        back-end, and I'm always eager to learn new technologies to stay up to
+        date. Outside of coding, I'm a huge cricket fan and enjoy playing the
+        game in my free time. I believe taking time for hobbies keeps me
+        refreshed and creative in my work.
+        <br />
+        Looking ahead, I’m eager to dive into AI and data science to expand my
+        skillset and contribute to the future of technology.
       </p>
 
       <div
         data-aos="fade-left"
         className="flex justify-center gap-4 mt-6 items-center"
       >
-        <a
+        <Link
+          to="contact"
+          smooth={true}
+          offset={-60}
           className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
-          download
         >
-          Download CV
-        </a>
+          Let’s Connect
+        </Link>
+
         <Link
           to="portfolio"
           smooth={true}
