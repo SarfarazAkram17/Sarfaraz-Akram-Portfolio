@@ -34,7 +34,7 @@ const Showcase = () => {
         </h1>
         <div className="mt-3 mb-10 w-52 md:w-80 h-1 rounded-full mx-auto bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
 
-        <div className="rounded-xl grid grid-cols-2 sm:grid-cols-4 py-4 px-6 gap-4 items-center bg-white/5">
+        <div className="rounded-xl grid grid-cols-4 p-4 gap-4 items-center bg-white/5">
           {tabs.map((tab) => (
             <div
               key={tab.key}

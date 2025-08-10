@@ -111,12 +111,14 @@ const ProjectDetails = () => {
               </a>
             </div>
 
-            <div className="mt-15">
-              <h2 className="text-3xl mb-4 font-semibold">Future Plans :</h2>
-              <p className="text-white/80 leading-relaxed">
-                {project.futurePlan}
-              </p>
-            </div>
+            {project.futurePlan && (
+              <div className="mt-15">
+                <h2 className="text-3xl mb-4 font-semibold">Future Plans :</h2>
+                <p className="text-white/80 leading-relaxed">
+                  {project.futurePlan}
+                </p>
+              </div>
+            )}
           </div>
         </div>
 

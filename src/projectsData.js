@@ -1,8 +1,76 @@
-import taskwave from "./assets/taskwave.png";
+import samsKitchen from "./assets/sams-kitchen.png";
 import tournest from "./assets/tournest.png";
 import studify from "./assets/studify.png";
+import taskwave from "./assets/taskwave.png";
 
 const projectData = [
+  {
+    name: "Sam's Kitchen",
+    title:
+      "Sam's Kitchen – Food Delivery & Kitchen management System (FullStack)",
+    desc: "Sam's Kitchen is a food delivery and management platform where users can order food, riders can deliver orders, and admins can manage the entire kitchen system, including foods, payments, and rider assignments.",
+    techs: [
+      "React.js",
+      "Tailwind CSS",
+      "Express.js",
+      "MongoDB",
+      "Firebase Auth",
+      "JWT",
+      "Stripe",
+      "SSLCommerz",
+      "Tanstack Query",
+      "React Hook Form",
+    ],
+    features: [
+      {
+        icon: "🍔",
+        title: "Food Ordering System",
+        points: [
+          "Browse a wide variety of food items",
+          "Add items to the cart and proceed with secure payment via Stripe and SSLCommerz",
+          "Order tracking in real-time with push notifications",
+        ],
+      },
+      {
+        icon: "🚴‍♂️",
+        title: "Rider Management",
+        points: [
+          "Admin assigns orders to riders",
+          "Real-time updates on order statuses for riders",
+          "See completed deliveries",
+        ],
+      },
+      {
+        icon: "📋",
+        title: "Role-based Dashboard",
+        points: [
+          "Admin can add and manage foods, orders, users",
+          "Normal users apply to become a rider",
+          "Everyone see their stats in dashboard",
+        ],
+      },
+      {
+        icon: "🛒",
+        title: "Order History & Management",
+        points: [
+          "Users can view their all orders and track delivery status",
+          "Cancel orders when order status in pending",
+          "Admins can manage all orders from the dashboard",
+        ],
+      },
+      {
+        icon: "📱",
+        title: "Real-Time Notifications",
+        points: ["All users receive notifications for user actions"],
+      },
+    ],
+    status: "Completed",
+    image: samsKitchen,
+    github: "https://github.com/SarfarazAkram17/Sams-Kitchen-Client",
+    liveLink: "https://sams-kitchen.netlify.app",
+    aos: "fade-up-right",
+    futurePlan: "Implement react-share to share food items.",
+  },
   {
     name: "tournest",
     title: "TourNest – Tourism Management System (FullStack)",
@@ -77,9 +145,7 @@ const projectData = [
     image: tournest,
     github: "https://github.com/SarfarazAkram17/TourNest-Client",
     liveLink: "https://tournest-sarfaraz-akram.netlify.app",
-    aos: "fade-up-right",
-    futurePlan:
-      "Make notification system to notify all users when a tour package is created.",
+    aos: "fade-up",
   },
   {
     name: "studify",
@@ -87,6 +153,7 @@ const projectData = [
     desc: "Studify is a group study platform where students can create assignments, submit work, and peer-review submissions with scoring and feedback.",
     techs: [
       "React.js",
+      "Tailwind CSS",
       "Firebase",
       "Express.js",
       "MongoDB",
@@ -138,8 +205,7 @@ const projectData = [
     image: studify,
     github: "https://github.com/SarfarazAkram17/Studify-Client",
     liveLink: "https://assignment-11-sarfaraz-akram.netlify.app",
-    aos: "fade-up",
-    futurePlan: "Implement dashboard and improve UI/UX design.",
+    aos: "fade-up-left",
   },
   {
     name: "taskwave",
@@ -177,9 +243,7 @@ const projectData = [
     image: taskwave,
     github: "https://github.com/SarfarazAkram17/Taskwave-Client",
     liveLink: "https://assignment-10-sarfaraz-akram.netlify.app",
-    aos: "fade-up-left",
-    futurePlan:
-      "Implement dashboard, improve UI/UX design, and implement fully functional footer navigation.",
+    aos: "fade-up-right",
   },
 ];
 
