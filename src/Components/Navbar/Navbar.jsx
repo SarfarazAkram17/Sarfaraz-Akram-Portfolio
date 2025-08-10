@@ -69,7 +69,7 @@ const Navbar = () => {
         </h1>
 
         {/* Desktop Navigation */}
-        <nav className="hidden sm:flex space-x-8 text-sm font-semibold text-white">
+        <nav className="hidden sm:flex space-x-8 font-semibold text-white">
           {navLinks.map(({ label, target }) => (
             <button
               key={target}
