@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Logo / Name */}
         <h1
           onClick={() => handleScrollTo("home")}
-          className="cursor-pointer text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600"
+          className="cursor-pointer text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-green-400 via-cyan-600 to-blue-600"
         >
           SARFARAZ AKRAM
         </h1>

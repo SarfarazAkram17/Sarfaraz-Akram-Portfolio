@@ -22,6 +22,8 @@ const projectData = [
       "SSLCommerz",
       "Tanstack Query",
       "React Hook Form",
+      "React Share",
+      "jsPDF",
     ],
     features: [
       {
@@ -31,6 +33,7 @@ const projectData = [
           "Browse a wide variety of food items",
           "Add items to the cart and proceed with secure payment via Stripe and SSLCommerz",
           "Order tracking in real-time with push notifications",
+          "Food sharing feature",
         ],
       },
       {
@@ -57,6 +60,7 @@ const projectData = [
         points: [
           "Users can view their all orders and track delivery status",
           "Cancel orders when order status in pending",
+          "Download reciept after payment",
           "Admins can manage all orders from the dashboard",
         ],
       },
