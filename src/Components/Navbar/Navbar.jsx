@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Logo / Name */}
         <h1
           onClick={() => handleScrollTo("home")}
-          className="cursor-pointer text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-green-400 via-cyan-600 to-blue-600"
+          className="cursor-pointer text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-cyan-600 to-blue-500"
         >
           SARFARAZ AKRAM
         </h1>
@@ -80,7 +80,7 @@ const Navbar = () => {
             >
               {label}
               <span
-                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
+                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-l from-blue-500 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
                   activeSection === target ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               ></span>
@@ -111,7 +111,7 @@ const Navbar = () => {
             >
               {label}
               <span
-                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
+                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
                   activeSection === target
                     ? "w-full"
                     : "w-0 group-hover:w-full"

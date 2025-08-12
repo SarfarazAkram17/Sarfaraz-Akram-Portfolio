@@ -8,6 +8,7 @@ import CopyRIght from "../Components/CopyRIght/CopyRIght";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GlowBg from "../Components/GLowBg/GlowBg";
 
 const RootLayout = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -56,6 +57,7 @@ const RootLayout = () => {
           height={6}
         />
       </div>
+      <GlowBg></GlowBg>
       <Cursor></Cursor>
       <Outlet></Outlet>
       <CopyRIght></CopyRIght>
