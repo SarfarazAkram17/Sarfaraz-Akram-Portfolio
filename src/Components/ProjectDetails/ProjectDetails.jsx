@@ -44,7 +44,7 @@ const ProjectDetails = () => {
             <h1 className="capitalize text-4xl sm:text-5xl font-bold text-white/80">
               {project.name}
             </h1>
-            <div className="mt-4 mb-10 w-16 md:w-20 animate-pulse h-1 rounded-full bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
+            <div className="mt-4 mb-10 w-20 md:w-28 animate-pulse h-1 rounded-full bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
           </div>
 
           <p className="text-white/70 leading-relaxed mb-6">{project.desc}</p>

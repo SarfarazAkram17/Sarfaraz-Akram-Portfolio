@@ -49,7 +49,7 @@ const Contact = () => {
         <h1 className="text-3xl text-center sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 via-cyan-600 to-green-600">
           Contact Me
         </h1>
-        <div className="mt-3 mb-14 w-40 h-1 rounded-full mx-auto bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
+        <div className="mt-3 mb-14 w-28 sm:w-40 h-1 rounded-full mx-auto bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600" />
       </div>
 
       <div className="flex flex-col lg:flex-row justify-center gap-6 items-stretch mb-20">
