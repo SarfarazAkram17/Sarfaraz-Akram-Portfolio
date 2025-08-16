@@ -66,7 +66,7 @@ const Projects = () => {
                 >
                   <span className="group flex items-center gap-1">
                     Live Demo{" "}
-                    <span className="mt-0.5 text-xs sm:text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <span className="mt-0.5 text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                       <HiArrowTopRightOnSquare />
                     </span>
                   </span>
