@@ -42,6 +42,7 @@ const Hero = () => {
         <div className="flex items-center gap-10">
           {/* Changed Link to button with manual scroll */}
           <a
+            href="/Resume.pdf"
             className="btn px-6 py-3 rounded-full font-semibold text-white border-0 shadow-lg bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600 hover:scale-105 active:scale-95 transition duration-300"
             download
           >
