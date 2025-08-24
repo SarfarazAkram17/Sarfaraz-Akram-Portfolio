@@ -2,8 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
 import { FaGithub } from "react-icons/fa";
 import { LiaLinkedinIn } from "react-icons/lia";
-import myPic from "../../assets/professional pic.jpeg";
-import { Link } from "react-scroll";
+import myPic from "../../assets/professional pic.png";
 
 const Hero = () => {
   return (
