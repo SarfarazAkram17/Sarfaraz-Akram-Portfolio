@@ -27,7 +27,7 @@ const techs = [
     aos: "fade-up-left",
     extra: "bg-white overflow-hidden rounded-full",
   },
-  { name: "MongoDb", src: mongodb, aos: "fade-up-left" },
+  { name: "MongoDB", src: mongodb, aos: "fade-up-left" },
   { name: "Node JS", src: node, aos: "fade-up-right" },
   { name: "Express JS", src: express, aos: "fade-up-right" },
   { name: "JWT", src: jwt, aos: "fade-up-left" },
