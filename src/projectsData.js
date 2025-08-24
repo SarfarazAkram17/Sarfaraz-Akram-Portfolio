@@ -8,7 +8,7 @@ const projectData = [
     name: "Sam's Kitchen",
     challanges: "Make notification system and conditional backend actions.",
     title:
-      "Sam's Kitchen – Food Delivery & Kitchen management System (FullStack)",
+      "Sam's Kitchen – Kitchen management System (FullStack)",
     desc: "Sam's Kitchen is a food delivery and management platform where users can order food, riders can deliver orders, and admins can manage the entire kitchen system, including foods, payments, and rider assignments.",
     techs: [
       "React.js",

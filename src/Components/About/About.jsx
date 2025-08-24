@@ -25,11 +25,12 @@ const About = () => {
         problem-solving skills. What excites me most is building user-friendly,
         scalable web applications that make a real difference.
         <br />
-        As a full-stack developer, I enjoy working on both the front-end and
-        back-end, and I'm always eager to learn new technologies to stay up to
-        date. Outside of coding, I'm a huge cricket fan and enjoy playing the
-        game in my free time. I believe taking time for hobbies keeps me
-        refreshed and creative in my work.
+        I’m a MERN Stack Developer with a strong interest in building full-stack
+        web applications. I enjoy working across both the front-end and
+        back-end, and I’m always learning new tools and technologies to improve
+        my skills. Outside of coding, I’m passionate about cricket and often
+        play in my free time, which helps me stay energized and creative in my
+        work.
         <br />
         Looking ahead, I’m eager to dive into AI and data science to expand my
         skillset and contribute to the future of technology.

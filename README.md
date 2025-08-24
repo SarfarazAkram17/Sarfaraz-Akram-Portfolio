@@ -1,6 +1,6 @@
 # Sarfaraz Akram — Personal Portfolio Website
 
-Welcome to my personal portfolio website showcasing my projects, skills, and professional journey as a Full Stack Developer.
+Welcome to my personal portfolio website showcasing my projects, skills, and professional journey as a MERN Stack Developer.
 
 ---
 

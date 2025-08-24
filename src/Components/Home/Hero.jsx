@@ -18,7 +18,7 @@ const Hero = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-600 to-green-600">
             <Typewriter
               words={[
-                "Full Stack Developer",
+                "MERN Stack Developer",
                 "Passionate Web Developer",
                 "Life Long Learner",
               ]}
@@ -31,8 +31,8 @@ const Hero = () => {
         </h3>
 
         <p className="text-white/70 leading-relaxed">
-          I am a detail-oriented Full Stack Developer skilled in React, Tailwind
-          CSS, Firebase, MongoDB, and Express.js. I build clean, scalable web
+          I am a detail-oriented MERN Stack Developer skilled in React, Tailwind
+          CSS, Firebase Auth & Hosting, MongoDB, and Express.js. I build clean, scalable web
           applications focused on performance and reliability. Leveraging AI
           tools, I enhance code quality and solve complex challenges
           efficiently. A lifelong learner, I continuously adopt new technologies
