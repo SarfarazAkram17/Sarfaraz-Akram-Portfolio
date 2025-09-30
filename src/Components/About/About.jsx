@@ -82,7 +82,7 @@ const About = () => {
             </div>
             <div className="space-y-16">
               <h2 data-aos="fade-up-right" className="text-3xl font-bold">
-                3
+                4
               </h2>
               <BsArrowDownRight />
             </div>
@@ -140,7 +140,7 @@ const About = () => {
             </div>
             <div className="space-y-16">
               <h2 data-aos="fade-down-left" className="text-3xl font-bold">
-                0
+                1
               </h2>
               <BsArrowDownRight />
             </div>
@@ -169,7 +169,7 @@ const About = () => {
             </div>
             <div className="space-y-16">
               <h2 data-aos="fade-up-left" className="text-3xl font-bold">
-                0
+                1
               </h2>
               <BsArrowDownRight />
             </div>

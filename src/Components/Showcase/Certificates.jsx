@@ -37,7 +37,7 @@ const Certificates = () => {
             >
               <img
                 src={certificate}
-                alt="Full Certificate"
+                alt="Certificate"
                 className="max-w-full max-h-full object-contain shadow-2xl"
               />
 
