@@ -38,24 +38,23 @@ const TechStack = () => {
     <div className="p-3 md:p-6 mt-6">
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {techs.map((tech, i) => (
-        <Tilt>
-              <div
-            key={i}
-            data-aos={tech.aos}
-            className="group h-36 bg-black/40 hover:scale-105 hover:bg-black/20 transition-all duration-500 p-4 rounded-lg flex gap-2 flex-col justify-center items-center"
-          >
-            {/* Image glow container */}
-            <div className="relative">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full blur-md opacity-0 group-hover:opacity-100 transition duration-500 -z-10 bg-gradient-to-br from-red-100 via-pink-200 to-rose-100"></div>
-              <img
-                src={tech.src}
-                alt={tech.name}
-                className={`w-16 relative z-10 ${tech.extra || ""}`}
-              />
+          <Tilt key={i}>
+            <div
+              data-aos={tech.aos}
+              className="group h-36 bg-black/40 hover:scale-105 hover:bg-black/20 transition-all duration-500 p-4 rounded-lg flex gap-2 flex-col justify-center items-center"
+            >
+              {/* Image glow container */}
+              <div className="relative">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full blur-md opacity-0 group-hover:opacity-100 transition duration-500 -z-10 bg-gradient-to-br from-red-100 via-pink-200 to-rose-100"></div>
+                <img
+                  src={tech.src}
+                  alt={tech.name}
+                  className={`w-16 relative z-10 ${tech.extra || ""}`}
+                />
+              </div>
+              <h5 className="text-white/70 font-bold">{tech.name}</h5>
             </div>
-            <h5 className="text-white/70 font-bold">{tech.name}</h5>
-          </div>
-        </Tilt>
+          </Tilt>
         ))}
       </div>
     </div>

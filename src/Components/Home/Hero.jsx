@@ -2,7 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
 import { FaGithub } from "react-icons/fa";
 import { LiaLinkedinIn } from "react-icons/lia";
-import myPic from "../../assets/professional pic.png";
+import myPic from "../../assets/professional-pic.png";
 
 const Hero = () => {
   return (
@@ -38,7 +38,7 @@ const Hero = () => {
           to stay ahead in this fast-evolving field.
         </p>
 
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-7 sm:gap-10">
           {/* Changed Link to button with manual scroll */}
           <a
             href="/Sarfaraz-Akram-Resume.pdf"
@@ -76,10 +76,10 @@ const Hero = () => {
       </div>
 
       {/* Right: Image */}
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="w-full md:w-1/2 h-auto flex justify-center">
         <Tilt>
-          <div className="relative p-1 border-2 border-cyan-400 rounded-lg">
-            <img src={myPic} alt="Sarfaraz Akram" className="w-60 h-auto" />
+          <div className="relative p-1 border-2 border-cyan-400 rounded-full overflow-hidden">
+            <img src={myPic} alt="Sarfaraz Akram" className="max-w-75 max-h-75 sm:max-w-85 sm:max-h-85" />
           </div>
         </Tilt>
       </div>
