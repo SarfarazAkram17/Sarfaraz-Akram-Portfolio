@@ -90,6 +90,37 @@ img {
   color: var(--ink);
   background: var(--acid);
 }
+
+/* ---------- Themed thin scrollbar ---------- */
+/* Chrome, Edge, Safari (custom size + gradient thumb) */
+::-webkit-scrollbar {
+  width: 6px; /* vertical scrollbar */
+  height: 6px; /* horizontal scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-soft);
+}
+::-webkit-scrollbar-thumb {
+  border: 1px solid var(--ink-soft);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--acid-dark), var(--acid));
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--acid);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox only (newer Chrome would otherwise ignore the 6px width above) */
+@supports (-moz-appearance: none) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(196, 237, 120, 0.45) var(--ink-soft);
+  }
+}
+
 :focus-visible {
   outline: 2px solid var(--acid);
   outline-offset: 4px;
