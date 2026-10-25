@@ -311,21 +311,6 @@ img {
   width: min(1160px, calc(100% - 52px));
   margin-inline: auto;
 }
-.skip-link {
-  position: fixed;
-  z-index: 120;
-  top: 12px;
-  left: 12px;
-  padding: 10px 14px;
-  transform: translateY(-160%);
-  border-radius: 8px;
-  background: var(--acid);
-  color: var(--ink);
-  font-weight: 800;
-}
-.skip-link:focus {
-  transform: translateY(0);
-}
 
 .site-header {
   position: fixed;

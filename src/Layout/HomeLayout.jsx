@@ -33,7 +33,6 @@ const HomeLayout = () => {
 
   return (
     <>
-      <a className="skip-link" href="#home">Skip to content</a>
       <Navbar />
       <main className="site-main">
         <Home />
