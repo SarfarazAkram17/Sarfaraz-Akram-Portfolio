@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import Hamburger from "hamburger-react";
+import { useEffect, useRef, useState } from "react";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 
 const navLinks = [
   { label: "Home", target: "home" },
@@ -11,116 +12,129 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const menuButtonRef = useRef(null);
 
   const handleScrollTo = (target) => {
-    const el = document.getElementById(target);
-    const header = document.querySelector("header");
-
-    if (el && header) {
-      const headerOffset =
-        window.innerWidth > 640
-          ? header.offsetHeight
-          : header.offsetHeight - 185;
-
-      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-
-      setIsOpen(false);
-    }
+    const wasMobileMenuOpen = isOpen;
+    document.getElementById(target)?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "start",
+    });
+    setIsOpen(false);
+    if (wasMobileMenuOpen) menuButtonRef.current?.focus();
   };
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      let closest = "";
-      let closestOffset = Infinity;
-
-      navLinks.forEach(({ target }) => {
-        const el = document.getElementById(target);
-        if (el) {
-          const top = el.getBoundingClientRect().top;
-          if (Math.abs(top) < closestOffset) {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        let closest = "home";
+        let closestOffset = Infinity;
+        navLinks.forEach(({ target }) => {
+          const element = document.getElementById(target);
+          if (!element) return;
+          const offset = Math.abs(element.getBoundingClientRect().top - 110);
+          if (offset < closestOffset) {
             closest = target;
-            closestOffset = Math.abs(top);
+            closestOffset = offset;
           }
-        }
+        });
+        setActiveSection(closest);
+        ticking = false;
       });
-
-      setActiveSection(closest);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <header className="fixed top-2 left-0 right-0 mx-auto z-50 w-[calc(100%-1rem)] md:w-full md:max-w-3xl bg-white/15 backdrop-blur-xl border border-white/10 rounded-xl">
-      <div className="px-2 sm:px-4 py-4 flex items-center justify-between">
-        {/* Logo / Name */}
-        <h1
-          onClick={() => handleScrollTo("home")}
-          className="cursor-pointer text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-cyan-600 to-blue-500"
-        >
-          SARFARAZ AKRAM
-        </h1>
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape" && isOpen) {
+        setIsOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [isOpen]);
 
-        {/* Desktop Navigation */}
-        <nav className="hidden sm:flex space-x-8 font-semibold text-white">
-          {navLinks.map(({ label, target }) => (
-            <button
-              key={target}
-              onClick={() => handleScrollTo(target)}
-              className={`relative group cursor-pointer transition-all ${
-                activeSection === target ? "active-link" : ""
-              }`}
-            >
-              {label}
-              <span
-                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-l from-blue-500 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
-                  activeSection === target ? "w-full" : "w-0 group-hover:w-full"
-                }`}
-              ></span>
-            </button>
-          ))}
-        </nav>
-
-        {/* Mobile Hamburger */}
-        <div className="sm:hidden">
-          <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
-        </div>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
-      <div
-        className={`sm:hidden overflow-hidden z-50 transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-        } bg-white/20 border border-white/10 rounded-b-xl`}
+  const renderLinks = () =>
+    navLinks.map(({ label, target }) => (
+      <button
+        key={target}
+        type="button"
+        onClick={() => handleScrollTo(target)}
+        aria-current={activeSection === target ? "location" : undefined}
+        className={`nav-link ${activeSection === target ? "active-link" : ""}`}
       >
-        <nav className="flex flex-col items-center py-4 space-y-4 text-white font-semibold">
-          {navLinks.map(({ label, target }) => (
-            <button
-              key={target}
-              onClick={() => handleScrollTo(target)}
-              className={`relative group cursor-pointer transition-all ${
-                activeSection === target ? "active-link" : ""
-              }`}
-            >
-              {label}
-              <span
-                className={`absolute bottom-[-4px] left-0 h-[2.5px] bg-gradient-to-l from-blue-400 via-cyan-600 to-green-600 rounded-full transition-all duration-500 ${
-                  activeSection === target
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                }`}
-              ></span>
-            </button>
-          ))}
+        {label}
+      </button>
+    ));
+
+  return (
+    <header className="site-header">
+      <div className="nav-inner">
+        <button
+          type="button"
+          className="brand-mark"
+          onClick={() => handleScrollTo("home")}
+          aria-label="Sarfaraz Akram, home"
+        >
+          <span className="brand-monogram">SA</span>
+          <span className="brand-name">
+            Sarfaraz <span>Akram</span>
+          </span>
+        </button>
+
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {renderLinks()}
         </nav>
+
+        <button
+          type="button"
+          className="nav-contact cursor-pointer"
+          onClick={() => handleScrollTo("contact")}
+        >
+          Let’s talk <HiArrowUpRight aria-hidden="true" />
+        </button>
+
+        <button
+          ref={menuButtonRef}
+          className="mobile-menu-button"
+          type="button"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? <IoCloseOutline size={22} /> : <IoMenuOutline size={22} />}
+        </button>
       </div>
+      <nav
+        id="mobile-navigation"
+        className={`mobile-nav ${isOpen ? "is-open" : ""}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!isOpen}
+      >
+        {navLinks.map(({ label, target }) => (
+          <button
+            key={target}
+            type="button"
+            tabIndex={isOpen ? 0 : -1}
+            onClick={() => handleScrollTo(target)}
+            aria-current={activeSection === target ? "location" : undefined}
+            className={activeSection === target ? "active-link" : ""}
+          >
+            {label}
+          </button>
+        ))}
+      </nav>
     </header>
   );
 };

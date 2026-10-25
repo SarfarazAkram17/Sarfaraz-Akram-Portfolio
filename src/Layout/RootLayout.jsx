@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import Cursor from "../Components/Cursor/Cursor";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import { ToastContainer } from "react-toastify";
 import { Outlet } from "react-router";
 import CopyRIght from "../Components/CopyRIght/CopyRIght";
-
+import Cursor from "../Components/Cursor/Cursor";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GlowBg from "../Components/GLowBg/GlowBg";
@@ -14,53 +13,44 @@ const RootLayout = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
 
   useEffect(() => {
+    let frame = 0;
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrollHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      setScrollPercent(scrolled);
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const scrollHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const percent =
+          scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
+        setScrollPercent(Math.min(100, Math.max(0, percent)));
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
-  // AOS init for animations repeated every time element is visible
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false, // Animate every time element enters viewport
-      mirror: true, // Animate on scroll up as well
-    });
-
-    const refreshAOS = () => {
-      AOS.refresh();
-    };
-
-    window.addEventListener("resize", refreshAOS);
-    window.addEventListener("scroll", refreshAOS);
-
-    return () => {
-      window.removeEventListener("resize", refreshAOS);
-      window.removeEventListener("scroll", refreshAOS);
-    };
+    AOS.init({ duration: 750, once: true, offset: 35, easing: "ease-out-cubic" });
+    AOS.refresh();
   }, []);
 
   return (
-    <div id="root">
-      <ToastContainer theme="dark"></ToastContainer>
-      <div className="fixed top-0 z-[9999] w-full">
-        <ProgressBar
-          percent={scrollPercent}
-          filledBackground="linear-gradient(to left, #60A5FA, #0891B2, #16A34A)"
-          height={6}
-        />
+    <div className="portfolio-shell">
+      <ToastContainer theme="dark" position="bottom-right" />
+      <div className="site-progress" aria-hidden="true">
+        <ProgressBar percent={scrollPercent} height={2} />
       </div>
-      <GlowBg></GlowBg>
-      <Cursor></Cursor>
-      <Outlet></Outlet>
-      <CopyRIght></CopyRIght>
+      <GlowBg />
+      <Cursor />
+      <Outlet />
+      <CopyRIght />
     </div>
   );
 };

@@ -1,57 +1,82 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FaExpand } from "react-icons/fa";
+import { IoCloseOutline } from "react-icons/io5";
 import certificate from "../../assets/Certificate.png";
 
 const Certificates = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef(null);
+  const closeRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    closeRef.current?.focus();
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [isOpen]);
+
+  const closeModal = () => {
+    setIsOpen(false);
+    triggerRef.current?.focus();
+  };
 
   return (
-    <div className="p-3 md:p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Image wrapper */}
-        <div data-aos="fade-up-right" className="relative group cursor-pointer">
-          <img src={certificate} alt="Certificate" className="w-full" />
-
-          {/* Overlay */}
-          <div
-            className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 
-                       transition-opacity duration-300 flex items-center justify-center"
-            onClick={() => setIsOpen(true)}
-          >
-            <FaExpand className="w-8 h-8 text-white" />
+    <div className="credential-grid">
+      <article className="credential-card" data-aos="fade-up">
+        <button
+          ref={triggerRef}
+          type="button"
+          className="credential-image-button"
+          onClick={() => setIsOpen(true)}
+          aria-label="View certificate full size"
+        >
+          <img src={certificate} alt="Certificate" loading="lazy" />
+        </button>
+        <div className="credential-meta">
+          <div>
+            <h3>Certificate</h3>
+            <span>Professional learning</span>
           </div>
-        </div>
-      </div>
-
-      {/* Fullscreen Modal via Portal */}
-      {isOpen &&
-        createPortal(
-          <div
-            className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-[9999] p-4"
-            onClick={() => setIsOpen(false)}
+          <button
+            type="button"
+            className="credential-open"
+            onClick={() => setIsOpen(true)}
+            aria-label="Expand certificate"
           >
-            <div
-              className="relative w-full h-full flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={certificate}
-                alt="Certificate"
-                className="max-w-full max-h-full object-contain shadow-2xl"
-              />
+            <FaExpand aria-hidden="true" />
+          </button>
+        </div>
+      </article>
 
-              <button
-                className="absolute top-3 right-3 text-white bg-black/60 hover:bg-black/80 
-                     rounded-full h-8 w-8 flex items-center justify-center"
-                onClick={() => setIsOpen(false)}
-              >
-                ✕
-              </button>
-            </div>
-          </div>,
-          document.body
-        )}
+      {isOpen && createPortal(
+        <div className="credential-modal" onClick={closeModal}>
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-label="Certificate preview"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <img src={certificate} alt="Certificate, enlarged view" />
+            <button
+              ref={closeRef}
+              className="credential-modal-close"
+              type="button"
+              onClick={closeModal}
+              aria-label="Close certificate preview"
+            >
+              <IoCloseOutline size={24} aria-hidden="true" />
+            </button>
+          </section>
+        </div>,
+        document.body
+      )}
     </div>
   );
 };

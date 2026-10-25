@@ -1,4 +1,3 @@
-import React from "react";
 import html from "../../assets/html.png";
 import css from "../../assets/css.svg";
 import js from "../../assets/js.png";
@@ -11,54 +10,31 @@ import node from "../../assets/nodejs.svg";
 import express from "../../assets/express.png";
 import mongodb from "../../assets/mongodb.png";
 import github from "../../assets/github.png";
-import Tilt from "react-parallax-tilt";
 
 const techs = [
-  { name: "HTML", src: html, aos: "fade-up-right" },
-  { name: "CSS", src: css, aos: "fade-up-left" },
-  { name: "Tailwind CSS", src: tailwind, aos: "fade-up-left" },
-  { name: "JavaScript", src: js, aos: "fade-up-right" },
-  { name: "React", src: react, aos: "fade-up-right" },
-  { name: "Firebase", src: firebase, aos: "fade-up-left" },
-  { name: "T. Query", src: query, aos: "fade-up-right" },
-  {
-    name: "Github",
-    src: github,
-    aos: "fade-up-left",
-    extra: "bg-white overflow-hidden rounded-full",
-  },
-  { name: "MongoDB", src: mongodb, aos: "fade-up-left" },
-  { name: "Node JS", src: node, aos: "fade-up-right" },
-  { name: "Express JS", src: express, aos: "fade-up-right" },
-  { name: "JWT", src: jwt, aos: "fade-up-left" },
+  { name: "HTML", src: html },
+  { name: "CSS", src: css },
+  { name: "JavaScript", src: js },
+  { name: "Tailwind CSS", src: tailwind },
+  { name: "React", src: react },
+  { name: "TanStack Query", src: query },
+  { name: "Firebase", src: firebase },
+  { name: "JWT", src: jwt },
+  { name: "Node.js", src: node },
+  { name: "Express.js", src: express },
+  { name: "MongoDB", src: mongodb },
+  { name: "GitHub", src: github, extra: "tech-github-icon" },
 ];
 
-const TechStack = () => {
-  return (
-    <div className="p-3 md:p-6 mt-6">
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {techs.map((tech, i) => (
-          <Tilt key={i}>
-            <div
-              data-aos={tech.aos}
-              className="group h-36 bg-black/40 hover:scale-105 hover:bg-black/20 transition-all duration-500 p-4 rounded-lg flex gap-2 flex-col justify-center items-center"
-            >
-              {/* Image glow container */}
-              <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full blur-md opacity-0 group-hover:opacity-100 transition duration-500 -z-10 bg-gradient-to-br from-red-100 via-pink-200 to-rose-100"></div>
-                <img
-                  src={tech.src}
-                  alt={tech.name}
-                  className={`w-16 relative z-10 ${tech.extra || ""}`}
-                />
-              </div>
-              <h5 className="text-white/70 font-bold">{tech.name}</h5>
-            </div>
-          </Tilt>
-        ))}
-      </div>
-    </div>
-  );
-};
+const TechStack = () => (
+  <div className="tech-grid" aria-label="Technologies">
+    {techs.map((tech) => (
+      <article className="tech-item" key={tech.name}>
+        <img className={tech.extra || ""} src={tech.src} alt="" loading="lazy" />
+        <h3>{tech.name}</h3>
+      </article>
+    ))}
+  </div>
+);
 
 export default TechStack;

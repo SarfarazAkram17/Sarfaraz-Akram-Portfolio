@@ -6,9 +6,9 @@ import taskwave from "./assets/taskwave.png";
 const projectData = [
   {
     name: "Sam's Kitchen",
-    challanges: "Make notification system and conditional backend actions.",
+    challanges: "Building a notification system and conditional backend actions.",
     title:
-      "Sam's Kitchen – Kitchen management System (FullStack)",
+      "Sam's Kitchen — Kitchen Management System (Full Stack)",
     desc: "Sam's Kitchen is a kitchen management platform where users can order food, riders can deliver orders, and admins can manage the entire kitchen system, including foods, payments, and rider assignments.",
     techs: [
       "React.js",
@@ -50,16 +50,16 @@ const projectData = [
         points: [
           "Admin can add and manage foods, orders, users",
           "Normal users apply to become a rider",
-          "Everyone see their stats in dashboard",
+          "Everyone can see their stats in the dashboard",
         ],
       },
       {
         icon: "🛒",
         title: "Order History & Management",
         points: [
-          "Users can view their all orders and track delivery status",
-          "Cancel orders when order status in pending",
-          "Download reciept after payment",
+          "Users can view all of their orders and track delivery status",
+          "Cancel orders while the order status is pending",
+          "Download a receipt after payment",
           "Admins can manage all orders from the dashboard",
         ],
       },
@@ -77,8 +77,8 @@ const projectData = [
   },
   {
     name: "tournest",
-    challanges: "Making post story on facebook using react-share.",
-    title: "TourNest – Tourism Management System (FullStack)",
+    challanges: "Sharing travel stories on Facebook with React Share.",
+    title: "TourNest — Tourism Management System (Full Stack)",
     desc: "TourNest is a complete tourism management platform that allows users to book tour packages, apply as tour guides, share stories, and make secure payments, all under a role-based access-controlled environment.",
     techs: [
       "React.js",
@@ -132,7 +132,7 @@ const projectData = [
         icon: "📊",
         title: "Admin Analytics",
         points: [
-          "Admin can see stats like total payments, users, tour guides, packages, stories in his dashboard",
+          "Admins can see statistics for payments, users, guides, packages, and stories in the dashboard",
           "Dynamic data from MongoDB queries",
         ],
       },
@@ -154,7 +154,7 @@ const projectData = [
   },
   {
     name: "studify",
-    title: "Studify – Group Study Platform (FullStack)",
+    title: "Studify — Group Study Platform (Full Stack)",
     challanges: "Implement JWT.",
     desc: "Studify is a group study platform where students can create assignments, submit work, and peer-review submissions with scoring and feedback.",
     techs: [
@@ -215,9 +215,9 @@ const projectData = [
   },
   {
     name: "taskwave",
-    title: "TaskWave – Freelancing Platform for Micro Tasks (FullStack)",
-    challanges: "Make the backend and apply conditions.",
-    desc: "TaskWave is a modern freelance platform for small tasks where employers post jobs, and freelancers bid for them.",
+    challanges: "Building the backend and applying the right access conditions.",
+    title: "TaskWave — Freelance Platform for Microtasks (Full Stack)",
+    desc: "TaskWave is a freelance platform for small tasks where employers post jobs and freelancers bid for them.",
     techs: ["Tailwind CSS", "React.js", "Express.js", "MongoDB", "Firebase"],
     features: [
       {

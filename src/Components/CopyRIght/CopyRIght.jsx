@@ -1,11 +1,8 @@
-import React from 'react';
-
-const CopyRIght = () => {
-    return (
-             <p className="w-full mt-10 mb-8 font-semibold text-center text-sm text-white">
-        © {new Date().getFullYear()} Sarfaraz Akram. All rights reserved.
-      </p>
-    );
-};
+const CopyRIght = () => (
+  <footer className="site-footer">
+    <span>© {new Date().getFullYear()} Sarfaraz Akram. All rights reserved.</span>
+    <span className="footer-mark">DESIGNED &amp; BUILT WITH CARE</span>
+  </footer>
+);
 
 export default CopyRIght;
