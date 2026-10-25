@@ -1457,7 +1457,7 @@ a.contact-method:hover {
   width: min(1160px, calc(100% - 52px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 50px 0 86px;
+  padding: 50px 0;
 }
 .detail-breadcrumb {
   display: flex;
@@ -1768,8 +1768,7 @@ a.contact-method:hover {
     width: min(290px, 72%);
   }
   .visual-index {
-    top: 13%;
-    left: 5%;
+    top: 5%;
   }
   .visual-caption {
     right: 4%;
@@ -1899,7 +1898,7 @@ a.contact-method:hover {
     height: 40px;
   }
   .detail-page {
-    padding-top: 98px;
+    padding-top: 50px;
   }
   .detail-hero {
     grid-template-columns: 1fr;

@@ -9,9 +9,10 @@ import myPic from "../../assets/professional-pic.png";
 const Hero = () => {
   const [reduceMotion, setReduceMotion] = useState(false);
   const roleWords = [
-    "MERN stack developer",
-    "full-stack problem solver",
-    "curious lifelong learner",
+    "MERN Stack Developer",
+    "Full-Stack Developer",
+    "Feature focused developer",
+    "Curious lifelong learner",
   ];
 
   useEffect(() => {
