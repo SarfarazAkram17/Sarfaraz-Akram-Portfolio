@@ -175,12 +175,6 @@ const Contact = () => {
                 required
               />
             </div>
-            <input
-              type="hidden"
-              name="time"
-              value={new Date().toLocaleString()}
-              readOnly
-            />
             <button
               disabled={messaging}
               type="submit"

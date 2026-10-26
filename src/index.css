@@ -1404,7 +1404,7 @@ a.contact-method:hover {
 }
 .form-field textarea {
   min-height: 132px;
-  resize: vertical;
+  resize: none;
   line-height: 1.7;
 }
 .form-field input::placeholder,
