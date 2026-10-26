@@ -1,36 +1,36 @@
-import html from "../../assets/html.png";
-import css from "../../assets/css.svg";
-import js from "../../assets/js.png";
-import tailwind from "../../assets/tailwind.png";
-import react from "../../assets/react.svg";
-import firebase from "../../assets/firebase.png";
-import query from "../../assets/query.png";
-import jwt from "../../assets/jwt.png";
-import node from "../../assets/nodejs.svg";
-import express from "../../assets/express.png";
-import mongodb from "../../assets/mongodb.png";
-import github from "../../assets/github.png";
+import {
+  SiExpress,
+  SiJsonwebtokens,
+  SiGithub,
+  SiMongodb,
+  SiTailwindcss,
+  SiTanstack,
+} from "react-icons/si";
+import { FaCss3Alt, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
+import { RiFirebaseLine } from "react-icons/ri";
 
 const techs = [
-  { name: "HTML", src: html },
-  { name: "CSS", src: css },
-  { name: "JavaScript", src: js },
-  { name: "Tailwind CSS", src: tailwind },
-  { name: "React", src: react },
-  { name: "TanStack Query", src: query },
-  { name: "Firebase", src: firebase },
-  { name: "JWT", src: jwt },
-  { name: "Node.js", src: node },
-  { name: "Express.js", src: express },
-  { name: "MongoDB", src: mongodb },
-  { name: "GitHub", src: github, extra: "tech-github-icon" },
+  { name: "HTML", icon: FaHtml5, color: "#e76f3c" },
+  { name: "CSS", icon: FaCss3Alt, color: "#5796dc" },
+  { name: "JavaScript", icon: FaJs, color: "#e6bd45" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#51b9c8" },
+  { name: "React", icon: FaReact, color: "#61bfe3" },
+  { name: "TanStack Query", icon: SiTanstack, color: "#e66048" },
+  { name: "Firebase", icon: RiFirebaseLine, color: "#eeb949" },
+  { name: "JWT", icon: SiJsonwebtokens, color: "#d5c58f" },
+  { name: "Node.js", icon: FaNodeJs, color: "#79ae65" },
+  { name: "Express.js", icon: SiExpress, color: "#d7dfd4" },
+  { name: "MongoDB", icon: SiMongodb, color: "#5fbd83" },
+  { name: "GitHub", icon: SiGithub, color: "#d7dfd4" },
 ];
 
 const TechStack = () => (
   <div className="tech-grid" aria-label="Technologies">
     {techs.map((tech) => (
       <article className="tech-item" key={tech.name}>
-        <img className={tech.extra || ""} src={tech.src} alt="" loading="lazy" />
+        <span className="tech-logo" style={{ color: tech.color }}>
+          <tech.icon aria-hidden="true" />
+        </span>
         <h3>{tech.name}</h3>
       </article>
     ))}
